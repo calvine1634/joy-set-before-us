@@ -1,0 +1,2544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Joy Set Before Us</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap');
+
+:root {
+  --cream: #FAF7F2;
+  --parchment: #F3EDE4;
+  --ink: #2C2418;
+  --ink-light: #5A4E3C;
+  --gold: #B8943E;
+  --gold-light: #D4B96A;
+  --gold-pale: #E8D9A8;
+  --gold-glow: rgba(184,148,62,.12);
+  --rust: #8B5E3C;
+  --sage: #6B7B5E;
+  --border: #D9CFC0;
+  --shadow: rgba(44,36,24,.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+/* ============ HEADER ============ */
+.hero {
+  padding: 3.5rem 1.5rem 2rem;
+  text-align: center;
+  background: linear-gradient(170deg, #2C2418 0%, #3D3225 40%, #4A3D2E 70%, #2C2418 100%);
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(184,148,62,.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; }
+.hero-orn { color: var(--gold); font-size: 1.2rem; letter-spacing: .7em; margin-bottom: 1rem; opacity: .6; }
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: .06em;
+  line-height: 1.15;
+  margin-bottom: .6rem;
+}
+.hero h1 em { font-weight: 400; color: var(--gold-light); }
+.hero-sub {
+  font-size: .75rem;
+  font-weight: 300;
+  color: var(--gold-pale);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  line-height: 1.8;
+}
+
+/* ============ PAGE SYSTEM ============ */
+/* Overview is shown by default. Detail pages hidden. */
+/* When a detail :target is active, it shows and overview hides. */
+.page {
+  display: none;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+.page:target { display: block; }
+
+/* Overview is special — shown when NO hash or #home */
+#home { display: block; }
+#home:target { display: block; }
+/* Hide #home when ANY other page is targeted */
+/* CSS trick: pages come before #home; when targeted they set display, 
+   and we use ~ to hide home */
+.page:target ~ #home { display: none; }
+
+/* ============ OVERVIEW ============ */
+.ov-intro {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  font-size: .9rem;
+  color: var(--ink-light);
+  line-height: 1.8;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.day-row {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  padding: 1.1rem;
+  margin-bottom: .75rem;
+  position: relative;
+}
+.day-row::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: var(--border);
+  border-radius: 6px 0 0 6px;
+}
+.dr-label {
+  font-size: .7rem;
+  font-weight: 700;
+  color: var(--ink-light);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-bottom: .6rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+.today-badge {
+  font-size: .55rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .15rem .5rem;
+  border: 1px solid var(--gold-pale);
+  border-radius: 20px;
+  background: rgba(184,148,62,.08);
+}
+
+/* Topic card links */
+.tc {
+  display: block;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  padding: .9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: rgba(250,247,242,.5);
+  color: inherit;
+  margin-bottom: .5rem;
+  position: relative;
+  min-height: 44px;
+}
+.tc:last-child { margin-bottom: 0; }
+.tc:active { background: #fff; border-color: var(--gold-pale); }
+.tc-type {
+  display: block;
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: .35rem;
+}
+.tc-type.f { color: var(--sage); }
+.tc-type.r { color: var(--rust); }
+.tc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: .25rem;
+}
+.tc-q {
+  font-size: .78rem;
+  color: var(--ink-light);
+  font-style: italic;
+  line-height: 1.5;
+}
+.tc-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--border);
+  font-size: 1.2rem;
+}
+
+/* ============ DETAIL PAGE ============ */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .6rem 0;
+  margin-bottom: 1.5rem;
+  min-height: 44px;
+}
+.back:active { color: var(--gold); }
+
+.dh { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.dh-day {
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: .3rem;
+}
+.dh-type {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .8rem;
+}
+.dh-type.f { color: var(--sage); }
+.dh-type.r { color: var(--rust); }
+.dh h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: .5rem;
+}
+.dh-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--rust);
+  margin-bottom: .8rem;
+}
+.dh-desc { font-size: .9rem; color: var(--ink-light); line-height: 1.8; }
+
+/* Passage card */
+.pc {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+.pc-head { padding: 1.3rem 1.2rem 1.1rem; border-bottom: 1px solid var(--border); }
+.pc-t {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: .15rem;
+}
+.pc-ref { font-size: .74rem; color: var(--sage); font-weight: 500; margin-bottom: .7rem; }
+.pc-sum { font-size: .88rem; color: var(--ink-light); line-height: 1.7; margin-bottom: .4rem; }
+.pc-rq { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: var(--rust); }
+.pc-body { padding: 1.3rem 1.2rem; background: var(--parchment); }
+.pc-sl {
+  font-size: .63rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: .8rem;
+}
+.pc-sc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 2.1;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.verse-num {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .63rem;
+  font-weight: 700;
+  color: var(--gold);
+  vertical-align: super;
+  margin-right: 2px;
+}
+
+/* More passages link */
+.more-link {
+  display: block;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: .08em;
+  border: 1px solid var(--gold-pale);
+  background: rgba(184,148,62,.05);
+  text-decoration: none;
+  padding: .7rem 1.2rem;
+  border-radius: 4px;
+  min-height: 44px;
+  line-height: 44px;
+  margin-bottom: 1.5rem;
+}
+.more-link:active { background: var(--gold); color: #fff; border-color: var(--gold); }
+
+/* Reflection */
+.ra {
+  padding: 1.3rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.ra h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 500; margin-bottom: .5rem; }
+.ra textarea {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .8rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--cream);
+  resize: vertical;
+}
+.ra textarea:focus { outline: none; border-color: var(--gold); }
+
+/* Footer */
+.ft { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); font-size: .72rem; color: var(--ink-light); letter-spacing: .1em; }
+.ft .o { color: var(--gold); font-size: .9rem; letter-spacing: .5em; display: block; margin-bottom: .5rem; }
+
+@media (max-width: 380px) {
+  .hero { padding: 2.2rem 1rem 1.5rem; }
+  .tc-title { font-size: 1.05rem; }
+  .dh h2 { font-size: 1.5rem; }
+  .pc-head, .pc-body { padding: 1rem; }
+  .pc-t { font-size: 1.2rem; }
+  .pc-sc { font-size: .98rem; line-height: 1.9; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-orn">&#10022; &#10022; &#10022;</div>
+    <h1>The <em>Joy</em> Set Before Us</h1>
+    <p class="hero-sub">Our Responsibility to Increasingly Understand Life &amp; Respond Well</p>
+  </div>
+</header>
+
+<div class="page" id="mon-f-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Creation</div>
+      <div class="pc-ref">Genesis 1–2</div>
+      <div class="pc-sum">Reality is designed by God, not negotiated by humans or an endless production.</div>
+      <div class="pc-rq">Do I live like reality depends on man?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>In the beginning God created the heavens and the earth. <span class='verse-num'>2</span>The earth was formless and void, and darkness was over the surface of the deep, and the Spirit of God was moving over the surface of the waters. <span class='verse-num'>3</span>Then God said, "Let there be light"; and there was light. <span class='verse-num'>26</span>Then God said, "Let Us make man in Our image, according to Our likeness; and let them rule over the fish of the sea and over the birds of the sky and over all the earth." <span class='verse-num'>27</span>God created man in His own image, in the image of God He created him; male and female He created them. <span class='verse-num'>31</span>God saw all that He had made, and behold, it was very good.</div>
+    </div>
+  </div>
+  <a href="#mon-f-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-f-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Tower of Babel</div>
+      <div class="pc-ref">Genesis 11</div>
+      <div class="pc-sum">Man attempts to define reality and value.</div>
+      <div class="pc-rq">Do I live believing in God’s reality or man’s?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>Now the whole earth used the same language and the same words. <span class='verse-num'>4</span>They said, "Come, let us build for ourselves a city, and a tower whose top will reach into heaven, and let us make for ourselves a name." <span class='verse-num'>5</span>The Lord came down to see the city and the tower which the sons of men had built. <span class='verse-num'>7</span>"Come, let Us go down and there confuse their language, so that they will not understand one another's speech." <span class='verse-num'>8</span>So the Lord scattered them abroad from there over the face of the whole earth; and they stopped building the city.</div>
+    </div>
+  </div>
+  <a href="#mon-f-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-f-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Hagar in the Wilderness</div>
+      <div class="pc-ref">Genesis 16 & 21</div>
+      <div class="pc-sum">Reality is found in God even when abandoned by people.</div>
+      <div class="pc-rq">Do I live knowing that God sees me?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>7</span>Now the angel of the Lord found her by a spring of water in the wilderness. <span class='verse-num'>8</span>He said, "Hagar, Sarai's maid, where have you come from and where are you going?" And she said, "I am fleeing from the presence of my mistress Sarai." <span class='verse-num'>13</span>Then she called the name of the Lord who spoke to her, "You are a God who sees"; for she said, "Have I even remained alive here after seeing Him?"</div>
+    </div>
+  </div>
+  <a href="#mon-f-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-f-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Jacob's Dream</div>
+      <div class="pc-ref">Genesis 28</div>
+      <div class="pc-sum">The spiritual world is reality and active.</div>
+      <div class="pc-rq">Do I live from a spiritual reality?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>12</span>He had a dream, and behold, a ladder was set on the earth with its top reaching to heaven; and behold, the angels of God were ascending and descending on it. <span class='verse-num'>13</span>And behold, the Lord stood above it and said, "I am the Lord, the God of your father Abraham and the God of Isaac; the land on which you lie, I will give it to you and to your descendants." <span class='verse-num'>16</span>Then Jacob awoke from his sleep and said, "Surely the Lord is in this place, and I did not know it." <span class='verse-num'>17</span>He was afraid and said, "How awesome is this place! This is none other than the house of God, and this is the gate of heaven."</div>
+    </div>
+  </div>
+  <a href="#mon-f-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-f-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Burning Bush</div>
+      <div class="pc-ref">Exodus 3</div>
+      <div class="pc-sum">Understanding reality begins with God's revelation, not human awareness.</div>
+      <div class="pc-rq">Do I posture my life so that I can listen to God?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>2</span>The angel of the Lord appeared to him in a blazing fire from the midst of a bush; and he looked, and behold, the bush was burning with fire, yet the bush was not consumed. <span class='verse-num'>4</span>When the Lord saw that he turned aside to look, God called to him from the midst of the bush and said, "Moses, Moses!" And he said, "Here I am." <span class='verse-num'>5</span>Then He said, "Do not come near here; remove your sandals from your feet, for the place on which you are standing is holy ground." <span class='verse-num'>6</span>He said also, "I am the God of your father, the God of Abraham, the God of Isaac, and the God of Jacob." Then Moses hid his face, for he was afraid to look at God.</div>
+    </div>
+  </div>
+  <a href="#mon-f-5" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-f-5">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">"I AM"</div>
+      <div class="pc-ref">Exodus 3:13–15</div>
+      <div class="pc-sum">Reality is grounded in the eternal God, not shifting circumstance.</div>
+      <div class="pc-rq">Do I anchor my living, my beliefs and values, in God?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>13</span>Then Moses said to God, "Behold, I am going to the sons of Israel, and I will say to them, 'The God of your fathers has sent me to you.' Now they may say to me, 'What is His name?' What shall I say to them?" <span class='verse-num'>14</span>God said to Moses, "I AM WHO I AM"; and He said, "Thus you shall say to the sons of Israel, 'I AM has sent me to you.'"</div>
+    </div>
+  </div>
+  <a href="#mon-f-6" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-f-6">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Crossing the Red Sea</div>
+      <div class="pc-ref">Exodus 14</div>
+      <div class="pc-sum">What appears impossible often becomes the stage for God's reality.</div>
+      <div class="pc-rq">Do I trust God when the path seems closed?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>13</span>But Moses said to the people, "Do not fear! Stand by and see the salvation of the Lord which He will accomplish for you today." <span class='verse-num'>14</span>"The Lord will fight for you while you keep silent." <span class='verse-num'>21</span>Then Moses stretched out his hand over the sea; and the Lord swept the sea back by a strong east wind all night and turned the sea into dry land, so the waters were divided. <span class='verse-num'>22</span>The sons of Israel went through the midst of the sea on the dry land, and the waters were like a wall to them on their right hand and on their left.</div>
+    </div>
+  </div>
+  <a href="#mon-f-7" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-f-7">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Word Became Flesh</div>
+      <div class="pc-ref">John 1:1–14</div>
+      <div class="pc-sum">Reality is not abstract, it is personal and recognized by those willing to see.</div>
+      <div class="pc-rq">Am I open to interpret reality through Jesus?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>In the beginning was the Word, and the Word was with God, and the Word was God. <span class='verse-num'>3</span>All things came into being through Him, and apart from Him nothing came into being that has come into being. <span class='verse-num'>4</span>In Him was life, and the life was the Light of men. <span class='verse-num'>5</span>The Light shines in the darkness, and the darkness did not comprehend it. <span class='verse-num'>14</span>And the Word became flesh, and dwelt among us, and we saw His glory, glory as of the only begotten from the Father, full of grace and truth.</div>
+    </div>
+  </div>
+  <a href="#mon-f-8" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-f-8">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Resurrection</div>
+      <div class="pc-ref">Matthew 28</div>
+      <div class="pc-sum">Death is not ultimate reality — God is.</div>
+      <div class="pc-rq">Do I live with an eternal perspective?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>5</span>The angel said to the women, "Do not be afraid; for I know that you are looking for Jesus who has been crucified. <span class='verse-num'>6</span>He is not here, for He has risen, just as He said. Come, see the place where He was lying. <span class='verse-num'>7</span>Go quickly and tell His disciples that He has risen from the dead."</div>
+    </div>
+  </div>
+  <a href="#mon-f-9" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-f-9">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Reality?</h2>
+    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Throne Room of Heaven</div>
+      <div class="pc-ref">Revelation 4–5</div>
+      <div class="pc-sum">Increasingly worshiping God increasingly understands reality.</div>
+      <div class="pc-rq">Does my life reflect worship of God?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>8</span>And the four living creatures, each one of them having six wings, are full of eyes around and within; and day and night they do not cease to say, "Holy, holy, holy is the Lord God, the Almighty, who was and who is and who is to come." <span class='verse-num'>11</span>"Worthy are You, our Lord and our God, to receive glory and honor and power; for You created all things, and because of Your will they existed, and were created."</div>
+    </div>
+  </div>
+  <a href="#mon-f-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-r-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Authority We Choose</h2>
+    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Fall</div>
+      <div class="pc-ref">Genesis 3</div>
+      <div class="pc-sum">Rejecting God, for the illusion of man's autonomy.</div>
+      <div class="pc-rq">Who does my life identify as my authority?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>Now the serpent was more crafty than any beast of the field which the Lord God had made. And he said to the woman, "Indeed, has God said, 'You shall not eat from any tree of the garden'?" <span class='verse-num'>4</span>The serpent said to the woman, "You surely will not die! <span class='verse-num'>5</span>For God knows that in the day you eat from it your eyes will be opened, and you will be like God, knowing good and evil." <span class='verse-num'>6</span>When the woman saw that the tree was good for food, and that it was a delight to the eyes, and that the tree was desirable to make one wise, she took from its fruit and ate; and she gave also to her husband with her, and he ate. <span class='verse-num'>7</span>Then the eyes of both of them were opened, and they knew that they were naked.</div>
+    </div>
+  </div>
+  <a href="#mon-r-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-r-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Authority We Choose</h2>
+    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Noah</div>
+      <div class="pc-ref">Genesis 6</div>
+      <div class="pc-sum">Belief in God looks insane without cultural support.</div>
+      <div class="pc-rq">Do I believe God even when I don't understand or desire it?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>5</span>Then the Lord saw that the wickedness of man was great on the earth, and that every intent of the thoughts of his heart was only evil continually. <span class='verse-num'>8</span>But Noah found favor in the eyes of the Lord. <span class='verse-num'>9</span>Noah was a righteous man, blameless in his time; Noah walked with God. <span class='verse-num'>22</span>Thus Noah did; according to all that God had commanded him, so he did.</div>
+    </div>
+  </div>
+  <a href="#mon-r-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-r-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Authority We Choose</h2>
+    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Ten Commandments</div>
+      <div class="pc-ref">Exodus 20</div>
+      <div class="pc-sum">Authority is not restriction but the architecture of freedom.</div>
+      <div class="pc-rq">Do I view God's commands as life-giving?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>Then God spoke all these words, saying, <span class='verse-num'>2</span>"I am the Lord your God, who brought you out of the land of Egypt, out of the house of slavery. <span class='verse-num'>3</span>You shall have no other gods before Me. <span class='verse-num'>12</span>Honor your father and your mother, that your days may be prolonged in the land which the Lord your God gives you."</div>
+    </div>
+  </div>
+  <a href="#mon-r-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-r-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Authority We Choose</h2>
+    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Golden Calf</div>
+      <div class="pc-ref">Exodus 32</div>
+      <div class="pc-sum">When we are distant from God, we manufacture substitutes.</div>
+      <div class="pc-rq">Do I pursue God — or settle for substitutes?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>Now when the people saw that Moses delayed to come down from the mountain, the people assembled about Aaron and said to him, "Come, make us a god who will go before us." <span class='verse-num'>4</span>He fashioned it with a graving tool and made it into a molten calf; and they said, "This is your god, O Israel, who brought you up from the land of Egypt." <span class='verse-num'>7</span>Then the Lord spoke to Moses, "Go down at once, for your people have corrupted themselves. <span class='verse-num'>8</span>They have quickly turned aside from the way which I commanded them."</div>
+    </div>
+  </div>
+  <a href="#mon-r-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-r-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Authority We Choose</h2>
+    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Temptation of Jesus</div>
+      <div class="pc-ref">Matthew 4:1–11</div>
+      <div class="pc-sum">God and His Word is our authority far beyond man's power.</div>
+      <div class="pc-rq">Is God and His character increasingly governing my life?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>Then Jesus was led up by the Spirit into the wilderness to be tempted by the devil. <span class='verse-num'>3</span>And the tempter came and said to Him, "If You are the Son of God, command that these stones become bread." <span class='verse-num'>4</span>But He answered and said, "It is written, 'Man shall not live on bread alone, but on every word that proceeds out of the mouth of God.'" <span class='verse-num'>10</span>Then Jesus said to him, "Go, Satan! For it is written, 'You shall worship the Lord your God, and serve Him only.'" <span class='verse-num'>11</span>Then the devil left Him; and behold, angels came and began to minister to Him.</div>
+    </div>
+  </div>
+  <a href="#mon-r-5" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-r-5">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Authority We Choose</h2>
+    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Good Shepherd</div>
+      <div class="pc-ref">John 10</div>
+      <div class="pc-sum">Authority leads with sacrificial care.</div>
+      <div class="pc-rq">Do I trust the Shepherd's voice over competing ones?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>11</span>"I am the good shepherd; the good shepherd lays down His life for the sheep. <span class='verse-num'>14</span>I am the good shepherd, and I know My own and My own know Me. <span class='verse-num'>27</span>My sheep hear My voice, and I know them, and they follow Me; <span class='verse-num'>28</span>and I give eternal life to them, and they will never perish; and no one will snatch them out of My hand."</div>
+    </div>
+  </div>
+  <a href="#mon-r-6" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="mon-r-6">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Monday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Authority We Choose</h2>
+    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Jesus Before Pilate</div>
+      <div class="pc-ref">Matthew 27:11–26</div>
+      <div class="pc-sum">True authority remains unthreatened by man's power.</div>
+      <div class="pc-rq">Do I stand secure in God independent of circumstance?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>11</span>Now Jesus stood before the governor, and the governor questioned Him, saying, "Are You the King of the Jews?" And Jesus said to him, "It is as you say." <span class='verse-num'>12</span>And while He was being accused by the chief priests and elders, He did not answer. <span class='verse-num'>14</span>And He did not answer him with regard to even a single charge, so the governor was quite amazed.</div>
+    </div>
+  </div>
+  <a href="#mon-r-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-f-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Who Are We?</h2>
+    <div class="dh-q">Do I live as a personal, spiritual, eternal being today?</div>
+    <div class="dh-desc">We are designed in God's image and likeness—spiritual, personal, and eternal persons with a heart, mind, body and soul. Deeply loved and dependent on God's authority and grace, we are given great responsibility and dignity to choose our destiny in a world designed with morality and purpose found in God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Creation of Humanity</div>
+      <div class="pc-ref">Genesis 1:26–27</div>
+      <div class="pc-sum">We are image-bearers designed for relationship with God.</div>
+      <div class="pc-rq">Do I live today as if I am more than physical?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>26</span>Then God said, "Let Us make man in Our image, according to Our likeness; and let them rule over the fish of the sea and over the birds of the sky and over all the earth." <span class='verse-num'>27</span>God created man in His own image, in the image of God He created him; male and female He created them. <span class='verse-num'>28</span>God blessed them; and God said to them, "Be fruitful and multiply, and fill the earth, and subdue it."</div>
+    </div>
+  </div>
+  <a href="#tue-f-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-f-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Who Are We?</h2>
+    <div class="dh-q">Do I live as a personal, spiritual, eternal being today?</div>
+    <div class="dh-desc">We are designed in God's image and likeness—spiritual, personal, and eternal persons with a heart, mind, body and soul. Deeply loved and dependent on God's authority and grace, we are given great responsibility and dignity to choose our destiny in a world designed with morality and purpose found in God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Baptism of Jesus</div>
+      <div class="pc-ref">Matthew 3:13–17</div>
+      <div class="pc-sum">Identity is received from our creator.</div>
+      <div class="pc-rq">Do I live from being God's beloved — not for it?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>16</span>After being baptized, Jesus came up immediately from the water; and behold, the heavens were opened, and he saw the Spirit of God descending as a dove and lighting on Him, <span class='verse-num'>17</span>and behold, a voice out of the heavens said, "This is My beloved Son, in whom I am well-pleased."</div>
+    </div>
+  </div>
+  <a href="#tue-f-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-f-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Who Are We?</h2>
+    <div class="dh-q">Do I live as a personal, spiritual, eternal being today?</div>
+    <div class="dh-desc">We are designed in God's image and likeness—spiritual, personal, and eternal persons with a heart, mind, body and soul. Deeply loved and dependent on God's authority and grace, we are given great responsibility and dignity to choose our destiny in a world designed with morality and purpose found in God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Prodigal Son</div>
+      <div class="pc-ref">Luke 15:11–32</div>
+      <div class="pc-sum">Identity is restored through grace, not earned through effort.</div>
+      <div class="pc-rq">Do I return quickly when I drift?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>20</span>So he got up and came to his father. But while he was still a long way off, his father saw him and felt compassion for him, and ran and embraced him and kissed him. <span class='verse-num'>21</span>And the son said to him, "Father, I have sinned against heaven and in your sight; I am no longer worthy to be called your son." <span class='verse-num'>22</span>But the father said to his slaves, "Quickly bring out the best robe and put it on him; <span class='verse-num'>24</span>for this son of mine was dead and has come to life again; he was lost and has been found." And they began to celebrate.</div>
+    </div>
+  </div>
+  <a href="#tue-f-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-f-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Who Are We?</h2>
+    <div class="dh-q">Do I live as a personal, spiritual, eternal being today?</div>
+    <div class="dh-desc">We are designed in God's image and likeness—spiritual, personal, and eternal persons with a heart, mind, body and soul. Deeply loved and dependent on God's authority and grace, we are given great responsibility and dignity to choose our destiny in a world designed with morality and purpose found in God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Branches of the Vine</div>
+      <div class="pc-ref">John 15</div>
+      <div class="pc-sum">Identity is sustained through abiding.</div>
+      <div class="pc-rq">Do I remain connected to Christ today?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>4</span>"Abide in Me, and I in you. As the branch cannot bear fruit of itself unless it abides in the vine, so neither can you unless you abide in Me. <span class='verse-num'>5</span>I am the vine, you are the branches; he who abides in Me and I in him, he bears much fruit, for apart from Me you can do nothing."</div>
+    </div>
+  </div>
+  <a href="#tue-f-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-f-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Who Are We?</h2>
+    <div class="dh-q">Do I live as a personal, spiritual, eternal being today?</div>
+    <div class="dh-desc">We are designed in God's image and likeness—spiritual, personal, and eternal persons with a heart, mind, body and soul. Deeply loved and dependent on God's authority and grace, we are given great responsibility and dignity to choose our destiny in a world designed with morality and purpose found in God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Life in the Spirit</div>
+      <div class="pc-ref">Romans 8</div>
+      <div class="pc-sum">Children of God are led by the Spirit of God.</div>
+      <div class="pc-rq">Is my life a reflection of life led by the Spirit?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>14</span>For all who are being led by the Spirit of God, these are sons of God. <span class='verse-num'>15</span>For you have not received a spirit of slavery leading to fear again, but you have received a spirit of adoption as sons by which we cry out, "Abba! Father!" <span class='verse-num'>16</span>The Spirit Himself testifies with our spirit that we are children of God.</div>
+    </div>
+  </div>
+  <a href="#tue-f-5" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-f-5">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Who Are We?</h2>
+    <div class="dh-q">Do I live as a personal, spiritual, eternal being today?</div>
+    <div class="dh-desc">We are designed in God's image and likeness—spiritual, personal, and eternal persons with a heart, mind, body and soul. Deeply loved and dependent on God's authority and grace, we are given great responsibility and dignity to choose our destiny in a world designed with morality and purpose found in God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Children of God</div>
+      <div class="pc-ref">John 1:12–13</div>
+      <div class="pc-sum">Identity is received through belief.</div>
+      <div class="pc-rq">Do I live as one born of God?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>12</span>But as many as received Him, to them He gave the right to become children of God, even to those who believe in His name, <span class='verse-num'>13</span>who were born, not of blood nor of the will of the flesh nor of the will of man, but of God.</div>
+    </div>
+  </div>
+  <a href="#tue-f-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-r-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Discipleship We Practice</h2>
+    <div class="dh-q">Do I live as a disciple of God today?</div>
+    <div class="dh-desc">Discipleship is the lifelong practice of following Jesus—learning His ways, embodying His character, and offering our whole lives in responsive obedience. It begins with proximity to Christ and matures through surrender, service, and faithfulness.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Call of Abram</div>
+      <div class="pc-ref">Genesis 12</div>
+      <div class="pc-sum">Obedience with no roadmap, no guarantees, just trust.</div>
+      <div class="pc-rq">Do I follow God beyond my understanding?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>Now the Lord said to Abram, "Go forth from your country, and from your relatives and from your father's house, to the land which I will show you; <span class='verse-num'>2</span>and I will make you a great nation, and I will bless you, and make your name great; and so you shall be a blessing." <span class='verse-num'>4</span>So Abram went forth as the Lord had spoken to him.</div>
+    </div>
+  </div>
+  <a href="#tue-r-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-r-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Discipleship We Practice</h2>
+    <div class="dh-q">Do I live as a disciple of God today?</div>
+    <div class="dh-desc">Discipleship is the lifelong practice of following Jesus—learning His ways, embodying His character, and offering our whole lives in responsive obedience. It begins with proximity to Christ and matures through surrender, service, and faithfulness.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Calling the Disciples</div>
+      <div class="pc-ref">Matthew 4:18–22</div>
+      <div class="pc-sum">Discipleship begins with leaving the old.</div>
+      <div class="pc-rq">What do I leave behind to follow?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>18</span>Now as Jesus was walking by the Sea of Galilee, He saw two brothers, Simon who was called Peter, and Andrew his brother, casting a net into the sea; for they were fishermen. <span class='verse-num'>19</span>And He said to them, "Follow Me, and I will make you fishers of men." <span class='verse-num'>20</span>Immediately they left their nets and followed Him.</div>
+    </div>
+  </div>
+  <a href="#tue-r-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-r-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Discipleship We Practice</h2>
+    <div class="dh-q">Do I live as a disciple of God today?</div>
+    <div class="dh-desc">Discipleship is the lifelong practice of following Jesus—learning His ways, embodying His character, and offering our whole lives in responsive obedience. It begins with proximity to Christ and matures through surrender, service, and faithfulness.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Counting the Cost</div>
+      <div class="pc-ref">Luke 14:25–33</div>
+      <div class="pc-sum">Discipleship requires wholehearted surrender.</div>
+      <div class="pc-rq">Do I withhold anything from God?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>27</span>"Whoever does not carry his own cross and come after Me cannot be My disciple. <span class='verse-num'>33</span>So then, none of you can be My disciple who does not give up all his own possessions."</div>
+    </div>
+  </div>
+  <a href="#tue-r-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-r-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Discipleship We Practice</h2>
+    <div class="dh-q">Do I live as a disciple of God today?</div>
+    <div class="dh-desc">Discipleship is the lifelong practice of following Jesus—learning His ways, embodying His character, and offering our whole lives in responsive obedience. It begins with proximity to Christ and matures through surrender, service, and faithfulness.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Washing the Disciples' Feet</div>
+      <div class="pc-ref">John 13</div>
+      <div class="pc-sum">Discipleship expresses itself through humble service.</div>
+      <div class="pc-rq">Do I lower myself for the good of another?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>4</span>Jesus got up from supper, and laid aside His garments; and taking a towel, He girded Himself. <span class='verse-num'>5</span>Then He poured water into the basin, and began to wash the disciples' feet. <span class='verse-num'>14</span>"If I then, the Lord and the Teacher, washed your feet, you also ought to wash one another's feet. <span class='verse-num'>15</span>For I gave you an example that you also should do as I did to you."</div>
+    </div>
+  </div>
+  <a href="#tue-r-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-r-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Discipleship We Practice</h2>
+    <div class="dh-q">Do I live as a disciple of God today?</div>
+    <div class="dh-desc">Discipleship is the lifelong practice of following Jesus—learning His ways, embodying His character, and offering our whole lives in responsive obedience. It begins with proximity to Christ and matures through surrender, service, and faithfulness.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Living Sacrifices</div>
+      <div class="pc-ref">Romans 12</div>
+      <div class="pc-sum">Discipleship offers the whole self to God.</div>
+      <div class="pc-rq">Was my life available to Him?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>Therefore I urge you, brethren, by the mercies of God, to present your bodies a living and holy sacrifice, acceptable to God, which is your spiritual service of worship. <span class='verse-num'>2</span>And do not be conformed to this world, but be transformed by the renewing of your mind, so that you may prove what the will of God is, that which is good and acceptable and perfect.</div>
+    </div>
+  </div>
+  <a href="#tue-r-5" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="tue-r-5">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Tuesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Discipleship We Practice</h2>
+    <div class="dh-q">Do I live as a disciple of God today?</div>
+    <div class="dh-desc">Discipleship is the lifelong practice of following Jesus—learning His ways, embodying His character, and offering our whole lives in responsive obedience. It begins with proximity to Christ and matures through surrender, service, and faithfulness.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Parable of the Sower</div>
+      <div class="pc-ref">Matthew 13</div>
+      <div class="pc-sum">The condition of the heart determines fruitfulness.</div>
+      <div class="pc-rq">Was my heart receptive today?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>3</span>"Behold, the sower went out to sow; <span class='verse-num'>8</span>And others fell on the good soil and yielded a crop, some a hundredfold, some sixty, and some thirty. <span class='verse-num'>23</span>And the one on whom seed was sown on the good soil, this is the man who hears the word and understands it; who indeed bears fruit."</div>
+    </div>
+  </div>
+  <a href="#tue-r-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-f-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Life About?</h2>
+    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Tower of Babel</div>
+      <div class="pc-ref">Genesis 11</div>
+      <div class="pc-sum">Man attempts autonomy.</div>
+      <div class="pc-rq">Do I pursue God's character or man's desires?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>4</span>They said, "Come, let us build for ourselves a city, and a tower whose top will reach into heaven, and let us make for ourselves a name." <span class='verse-num'>8</span>So the Lord scattered them abroad from there over the face of the whole earth; and they stopped building the city.</div>
+    </div>
+  </div>
+  <a href="#wed-f-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-f-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Life About?</h2>
+    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Love Your Enemies</div>
+      <div class="pc-ref">Matthew 5:43–48</div>
+      <div class="pc-sum">God's character loves beyond reciprocity.</div>
+      <div class="pc-rq">Do I love without requiring return?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>44</span>"But I say to you, love your enemies and pray for those who persecute you, <span class='verse-num'>45</span>so that you may be sons of your Father who is in heaven; for He causes His sun to rise on the evil and the good, and sends rain on the righteous and the unrighteous. <span class='verse-num'>48</span>Therefore you are to be perfect, as your heavenly Father is perfect."</div>
+    </div>
+  </div>
+  <a href="#wed-f-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-f-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Life About?</h2>
+    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Greatest in the Kingdom</div>
+      <div class="pc-ref">Matthew 18:1–14</div>
+      <div class="pc-sum">Childlike dependence defines greatness.</div>
+      <div class="pc-rq">Do I embrace dependence?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>At that time the disciples came to Jesus and said, "Who then is greatest in the kingdom of heaven?" <span class='verse-num'>2</span>And He called a child to Himself and set him before them, <span class='verse-num'>3</span>and said, "Truly I say to you, unless you are converted and become like children, you will not enter the kingdom of heaven. <span class='verse-num'>4</span>Whoever then humbles himself as this child, he is the greatest in the kingdom of heaven."</div>
+    </div>
+  </div>
+  <a href="#wed-f-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-f-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Life About?</h2>
+    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Christ's Self-Emptying</div>
+      <div class="pc-ref">Philippians 2</div>
+      <div class="pc-sum">Greatness descends before rising.</div>
+      <div class="pc-rq">Does humility guide my strength?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>5</span>Have this attitude in yourselves which was also in Christ Jesus, <span class='verse-num'>6</span>who, although He existed in the form of God, did not regard equality with God a thing to be grasped, <span class='verse-num'>7</span>but emptied Himself, taking the form of a bond-servant. <span class='verse-num'>8</span>Being found in appearance as a man, He humbled Himself by becoming obedient to the point of death, even death on a cross.</div>
+    </div>
+  </div>
+  <a href="#wed-f-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-f-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Life About?</h2>
+    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Solomon's Prayer for Wisdom</div>
+      <div class="pc-ref">1 Kings 3</div>
+      <div class="pc-sum">Humility asks before acting.</div>
+      <div class="pc-rq">Do I seek God's wisdom first?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>5</span>In Gibeon the Lord appeared to Solomon in a dream at night; and God said, "Ask what you wish Me to give you." <span class='verse-num'>9</span>"So give Your servant an understanding heart to judge Your people to discern between good and evil." <span class='verse-num'>10</span>It was pleasing in the sight of the Lord that Solomon had asked this thing.</div>
+    </div>
+  </div>
+  <a href="#wed-f-5" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-f-5">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Life About?</h2>
+    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Mary's Humble Yes</div>
+      <div class="pc-ref">Luke 1:38</div>
+      <div class="pc-sum">Great lives begin with surrendered availability.</div>
+      <div class="pc-rq">Does humility guide my response to God?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>28</span>And coming in, he said to her, "Greetings, favored one! The Lord is with you." <span class='verse-num'>30</span>The angel said to her, "Do not be afraid, Mary; for you have found favor with God." <span class='verse-num'>38</span>And Mary said, "Behold, the bondslave of the Lord; may it be done to me according to your word."</div>
+    </div>
+  </div>
+  <a href="#wed-f-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-r-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Image We Pursue</h2>
+    <div class="dh-q">Do I live in the name of the Trinity today?</div>
+    <div class="dh-desc">To bear God's image is to reflect His character in our relationships, work, and worship. It is communal and relational—we immerse ourselves for the good of the world, directing attention toward Christ rather than ourselves.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Joseph Forgives His Brothers</div>
+      <div class="pc-ref">Genesis 45</div>
+      <div class="pc-sum">Immersed in loving for others.</div>
+      <div class="pc-rq">Do I advance good relationships?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>4</span>Then Joseph said to his brothers, "I am your brother Joseph, whom you sold into Egypt. <span class='verse-num'>5</span>Now do not be grieved or angry with yourselves, because you sold me here, for God sent me before you to preserve life." <span class='verse-num'>15</span>He kissed all his brothers and wept on them.</div>
+    </div>
+  </div>
+  <a href="#wed-r-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-r-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Image We Pursue</h2>
+    <div class="dh-q">Do I live in the name of the Trinity today?</div>
+    <div class="dh-desc">To bear God's image is to reflect His character in our relationships, work, and worship. It is communal and relational—we immerse ourselves for the good of the world, directing attention toward Christ rather than ourselves.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Salt and Light</div>
+      <div class="pc-ref">Matthew 5:13–20</div>
+      <div class="pc-sum">Image-bearing is communal — we immerse for the good of the world.</div>
+      <div class="pc-rq">Does my life contribute good to my world?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>13</span>"You are the salt of the earth. <span class='verse-num'>14</span>You are the light of the world. A city set on a hill cannot be hidden. <span class='verse-num'>16</span>Let your light shine before men in such a way that they may see your good works, and glorify your Father who is in heaven."</div>
+    </div>
+  </div>
+  <a href="#wed-r-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-r-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Image We Pursue</h2>
+    <div class="dh-q">Do I live in the name of the Trinity today?</div>
+    <div class="dh-desc">To bear God's image is to reflect His character in our relationships, work, and worship. It is communal and relational—we immerse ourselves for the good of the world, directing attention toward Christ rather than ourselves.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">"Anyone Who Has Seen Me…"</div>
+      <div class="pc-ref">John 14:9</div>
+      <div class="pc-sum">Image-bearing reflects the character of God.</div>
+      <div class="pc-rq">Does my life make God more visible?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>9</span>Jesus said to him, "Have I been so long with you, and yet you have not come to know Me, Philip? He who has seen Me has seen the Father; how can you say, 'Show us the Father'?"</div>
+    </div>
+  </div>
+  <a href="#wed-r-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-r-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Image We Pursue</h2>
+    <div class="dh-q">Do I live in the name of the Trinity today?</div>
+    <div class="dh-desc">To bear God's image is to reflect His character in our relationships, work, and worship. It is communal and relational—we immerse ourselves for the good of the world, directing attention toward Christ rather than ourselves.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">God Is Love</div>
+      <div class="pc-ref">1 John 4</div>
+      <div class="pc-sum">To love is to reflect God.</div>
+      <div class="pc-rq">Do others encounter God through my love?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>7</span>Beloved, let us love one another, for love is from God; and everyone who loves is born of God and knows God. <span class='verse-num'>8</span>The one who does not love does not know God, for God is love. <span class='verse-num'>12</span>No one has seen God at any time; if we love one another, God abides in us, and His love is perfected in us.</div>
+    </div>
+  </div>
+  <a href="#wed-r-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="wed-r-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Wednesday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Image We Pursue</h2>
+    <div class="dh-q">Do I live in the name of the Trinity today?</div>
+    <div class="dh-desc">To bear God's image is to reflect His character in our relationships, work, and worship. It is communal and relational—we immerse ourselves for the good of the world, directing attention toward Christ rather than ourselves.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Rivers of Living Water</div>
+      <div class="pc-ref">John 7:37–39</div>
+      <div class="pc-sum">The Spirit flows through lives open to God.</div>
+      <div class="pc-rq">Was my life receptive to the Spirit?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>37</span>"If anyone is thirsty, let him come to Me and drink. <span class='verse-num'>38</span>He who believes in Me, as the Scripture said, 'From his innermost being will flow rivers of living water.'" <span class='verse-num'>39</span>But this He spoke of the Spirit, whom those who believed in Him were to receive.</div>
+    </div>
+  </div>
+  <a href="#wed-r-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-f-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Are We To Live?</h2>
+    <div class="dh-q">Do I live on the rock today?</div>
+    <div class="dh-desc">The good life—one that is blessed independent of circumstances—is life aligned with and living in the kingdom of God. It is life that is salt and light to a darkened world, reflected in a character increasingly free from anger, lust, manipulation, revenge, and hate.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Wise and Foolish Builders</div>
+      <div class="pc-ref">Matthew 7:24–29</div>
+      <div class="pc-sum">Stability comes from obedience, not admiration.</div>
+      <div class="pc-rq">Do I practice what Christ taught?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>24</span>"Therefore everyone who hears these words of Mine and acts on them, may be compared to a wise man who built his house on the rock. <span class='verse-num'>25</span>And the rain fell, and the floods came, and the winds blew and slammed against that house; and yet it did not fall, for it had been founded on the rock. <span class='verse-num'>26</span>Everyone who hears these words of Mine and does not act on them, will be like a foolish man who built his house on the sand. <span class='verse-num'>27</span>The rain fell, and the floods came, and the winds blew and slammed against that house; and it fell—and great was its fall."</div>
+    </div>
+  </div>
+  <a href="#thu-f-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-f-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Are We To Live?</h2>
+    <div class="dh-q">Do I live on the rock today?</div>
+    <div class="dh-desc">The good life—one that is blessed independent of circumstances—is life aligned with and living in the kingdom of God. It is life that is salt and light to a darkened world, reflected in a character increasingly free from anger, lust, manipulation, revenge, and hate.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Calming the Storm</div>
+      <div class="pc-ref">Matthew 8:23–27</div>
+      <div class="pc-sum">Peace is found in the presence of Christ, not the absence of storms.</div>
+      <div class="pc-rq">Does fear or faith interpret my circumstances?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>24</span>And behold, there arose a great storm on the sea, so that the boat was being covered with the waves; but Jesus Himself was asleep. <span class='verse-num'>25</span>And they came to Him and woke Him, saying, "Save us, Lord; we are perishing!" <span class='verse-num'>26</span>He said to them, "Why are you afraid, you men of little faith?" Then He got up and rebuked the winds and the sea, and it became perfectly calm.</div>
+    </div>
+  </div>
+  <a href="#thu-f-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-f-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Are We To Live?</h2>
+    <div class="dh-q">Do I live on the rock today?</div>
+    <div class="dh-desc">The good life—one that is blessed independent of circumstances—is life aligned with and living in the kingdom of God. It is life that is salt and light to a darkened world, reflected in a character increasingly free from anger, lust, manipulation, revenge, and hate.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Remaining in the Vine</div>
+      <div class="pc-ref">John 15</div>
+      <div class="pc-sum">Stability is found in abiding, not striving.</div>
+      <div class="pc-rq">Do I remain connected to Christ?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>4</span>"Abide in Me, and I in you. As the branch cannot bear fruit of itself unless it abides in the vine, so neither can you unless you abide in Me. <span class='verse-num'>5</span>I am the vine, you are the branches; he who abides in Me and I in him, he bears much fruit, for apart from Me you can do nothing."</div>
+    </div>
+  </div>
+  <a href="#thu-f-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-f-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Are We To Live?</h2>
+    <div class="dh-q">Do I live on the rock today?</div>
+    <div class="dh-desc">The good life—one that is blessed independent of circumstances—is life aligned with and living in the kingdom of God. It is life that is salt and light to a darkened world, reflected in a character increasingly free from anger, lust, manipulation, revenge, and hate.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Psalm 1 — The Rooted Life</div>
+      <div class="pc-ref">Psalm 1</div>
+      <div class="pc-sum">Stability grows through delight in God's instruction.</div>
+      <div class="pc-rq">Was my life deeply rooted?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>How blessed is the man who does not walk in the counsel of the wicked, nor stand in the path of sinners, nor sit in the seat of scoffers! <span class='verse-num'>2</span>But his delight is in the law of the Lord, and in His law he meditates day and night. <span class='verse-num'>3</span>He will be like a tree firmly planted by streams of water, which yields its fruit in its season and its leaf does not wither.</div>
+    </div>
+  </div>
+  <a href="#thu-f-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-f-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Are We To Live?</h2>
+    <div class="dh-q">Do I live on the rock today?</div>
+    <div class="dh-desc">The good life—one that is blessed independent of circumstances—is life aligned with and living in the kingdom of God. It is life that is salt and light to a darkened world, reflected in a character increasingly free from anger, lust, manipulation, revenge, and hate.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Steadfast Under Trial</div>
+      <div class="pc-ref">James 1</div>
+      <div class="pc-sum">Endurance strengthens the foundation.</div>
+      <div class="pc-rq">Does testing deepen me?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>2</span>Consider it all joy, my brethren, when you encounter various trials, <span class='verse-num'>3</span>knowing that the testing of your faith produces endurance. <span class='verse-num'>4</span>And let endurance have its perfect result, so that you may be perfect and complete, lacking in nothing. <span class='verse-num'>12</span>Blessed is a man who perseveres under trial; for once he has been approved, he will receive the crown of life.</div>
+    </div>
+  </div>
+  <a href="#thu-f-5" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-f-5">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Are We To Live?</h2>
+    <div class="dh-q">Do I live on the rock today?</div>
+    <div class="dh-desc">The good life—one that is blessed independent of circumstances—is life aligned with and living in the kingdom of God. It is life that is salt and light to a darkened world, reflected in a character increasingly free from anger, lust, manipulation, revenge, and hate.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Noah Builds the Ark</div>
+      <div class="pc-ref">Genesis 6</div>
+      <div class="pc-sum">Stability is built before storms arrive.</div>
+      <div class="pc-rq">Do I advance spiritual maturity?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>9</span>Noah was a righteous man, blameless in his time; Noah walked with God. <span class='verse-num'>14</span>"Make for yourself an ark of gopher wood." <span class='verse-num'>22</span>Thus Noah did; according to all that God had commanded him, so he did.</div>
+    </div>
+  </div>
+  <a href="#thu-f-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-r-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Education We Deepen</h2>
+    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Gospel</div>
+      <div class="pc-ref">Matthew 5:1–12</div>
+      <div class="pc-sum">Kingdom learning reshapes what we call blessed.</div>
+      <div class="pc-rq">Do I value what God calls good over what the world praises?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>3</span>"Blessed are the poor in spirit, for theirs is the kingdom of heaven. <span class='verse-num'>4</span>Blessed are those who mourn, for they shall be comforted. <span class='verse-num'>5</span>Blessed are the gentle, for they shall inherit the earth. <span class='verse-num'>6</span>Blessed are those who hunger and thirst for righteousness, for they shall be satisfied."</div>
+    </div>
+  </div>
+  <a href="#thu-r-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-r-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Education We Deepen</h2>
+    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Road to Emmaus</div>
+      <div class="pc-ref">Luke 24:13–35</div>
+      <div class="pc-sum">Understanding ignites when Scripture is opened.</div>
+      <div class="pc-rq">Do I allow God's Word to interpret my life?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>27</span>Then beginning with Moses and with all the prophets, He explained to them the things concerning Himself in all the Scriptures. <span class='verse-num'>32</span>They said to one another, "Were not our hearts burning within us while He was speaking to us on the road, while He was opening the Scriptures to us?"</div>
+    </div>
+  </div>
+  <a href="#thu-r-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-r-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Education We Deepen</h2>
+    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Transformed by Renewing the Mind</div>
+      <div class="pc-ref">Romans 12</div>
+      <div class="pc-sum">Understanding reshapes living.</div>
+      <div class="pc-rq">Does truth renew my thinking?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>Therefore I urge you, brethren, by the mercies of God, to present your bodies a living and holy sacrifice, acceptable to God, which is your spiritual service of worship. <span class='verse-num'>2</span>And do not be conformed to this world, but be transformed by the renewing of your mind, so that you may prove what the will of God is, that which is good and acceptable and perfect.</div>
+    </div>
+  </div>
+  <a href="#thu-r-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-r-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Education We Deepen</h2>
+    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Ask God for Wisdom</div>
+      <div class="pc-ref">James 1</div>
+      <div class="pc-sum">God gladly teaches the seeking heart.</div>
+      <div class="pc-rq">Do I seek God's wisdom?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>5</span>But if any of you lacks wisdom, let him ask of God, who gives to all generously and without reproach, and it will be given to him.</div>
+    </div>
+  </div>
+  <a href="#thu-r-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="thu-r-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Thursday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Education We Deepen</h2>
+    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Sanctify Them in Truth</div>
+      <div class="pc-ref">John 17:17</div>
+      <div class="pc-sum">Truth shapes holy lives.</div>
+      <div class="pc-rq">Does truth refine my character?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>17</span>"Sanctify them in the truth; Your word is truth. <span class='verse-num'>18</span>As You sent Me into the world, I also have sent them into the world."</div>
+    </div>
+  </div>
+  <a href="#thu-r-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-f-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Can We Love?</h2>
+    <div class="dh-q">Do I take up my cross today?</div>
+    <div class="dh-desc">The good news—the availability of the kingdom of God—is often neither heard, seen, understood, nor believed. Yet only through humility and seeking God's character of love do we begin to mature. As the hidden treasure comes into view—surpassing all else—it increasingly captures our hearts.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Abraham and Isaac</div>
+      <div class="pc-ref">Genesis 22</div>
+      <div class="pc-sum">Love trusts God more than outcomes.</div>
+      <div class="pc-rq">Does love cost me something today?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>2</span>He said, "Take now your son, your only son, whom you love, Isaac, and go to the land of Moriah, and offer him there as a burnt offering." <span class='verse-num'>3</span>So Abraham rose early in the morning. <span class='verse-num'>8</span>Abraham said, "God will provide for Himself the lamb for the burnt offering, my son." So the two of them walked on together.</div>
+    </div>
+  </div>
+  <a href="#fri-f-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-f-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Can We Love?</h2>
+    <div class="dh-q">Do I take up my cross today?</div>
+    <div class="dh-desc">The good news—the availability of the kingdom of God—is often neither heard, seen, understood, nor believed. Yet only through humility and seeking God's character of love do we begin to mature. As the hidden treasure comes into view—surpassing all else—it increasingly captures our hearts.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Good Samaritan</div>
+      <div class="pc-ref">Luke 10:25–37</div>
+      <div class="pc-sum">Love crosses inconvenience and boundary.</div>
+      <div class="pc-rq">Does love interrupt my comfort?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>33</span>But a Samaritan, who was on a journey, came upon him; and when he saw him, he felt compassion, <span class='verse-num'>34</span>and came to him and bandaged up his wounds. <span class='verse-num'>36</span>"Which of these three do you think proved to be a neighbor to the man who fell into the robbers' hands?" <span class='verse-num'>37</span>And he said, "The one who showed mercy toward him." Then Jesus said to him, "Go and do the same."</div>
+    </div>
+  </div>
+  <a href="#fri-f-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-f-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Can We Love?</h2>
+    <div class="dh-q">Do I take up my cross today?</div>
+    <div class="dh-desc">The good news—the availability of the kingdom of God—is often neither heard, seen, understood, nor believed. Yet only through humility and seeking God's character of love do we begin to mature. As the hidden treasure comes into view—surpassing all else—it increasingly captures our hearts.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Greatest Commandment</div>
+      <div class="pc-ref">Matthew 22:37–39</div>
+      <div class="pc-sum">Love of God overflows into love of neighbor.</div>
+      <div class="pc-rq">Does love order my priorities?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>37</span>And He said to him, "'You shall love the Lord your God with all your heart, and with all your soul, and with all your mind.' <span class='verse-num'>38</span>This is the great and foremost commandment. <span class='verse-num'>39</span>The second is like it, 'You shall love your neighbor as yourself.'"</div>
+    </div>
+  </div>
+  <a href="#fri-f-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-f-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Can We Love?</h2>
+    <div class="dh-q">Do I take up my cross today?</div>
+    <div class="dh-desc">The good news—the availability of the kingdom of God—is often neither heard, seen, understood, nor believed. Yet only through humility and seeking God's character of love do we begin to mature. As the hidden treasure comes into view—surpassing all else—it increasingly captures our hearts.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">For God So Loved the World</div>
+      <div class="pc-ref">John 3:16</div>
+      <div class="pc-sum">Love gives what is most precious.</div>
+      <div class="pc-rq">Does love cost me something today?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>16</span>"For God so loved the world, that He gave His only begotten Son, that whoever believes in Him shall not perish, but have eternal life. <span class='verse-num'>17</span>For God did not send the Son into the world to judge the world, but that the world might be saved through Him."</div>
+    </div>
+  </div>
+  <a href="#fri-f-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-f-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Can We Love?</h2>
+    <div class="dh-q">Do I take up my cross today?</div>
+    <div class="dh-desc">The good news—the availability of the kingdom of God—is often neither heard, seen, understood, nor believed. Yet only through humility and seeking God's character of love do we begin to mature. As the hidden treasure comes into view—surpassing all else—it increasingly captures our hearts.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Way of Love</div>
+      <div class="pc-ref">1 Corinthians 13</div>
+      <div class="pc-sum">Love is maturity revealed.</div>
+      <div class="pc-rq">Do patience and kindness mark me?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>4</span>Love is patient, love is kind and is not jealous; love does not brag and is not arrogant, <span class='verse-num'>5</span>does not act unbecomingly; it does not seek its own, is not provoked, does not take into account a wrong suffered. <span class='verse-num'>7</span>Bears all things, believes all things, hopes all things, endures all things. <span class='verse-num'>8</span>Love never fails.</div>
+    </div>
+  </div>
+  <a href="#fri-f-5" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-f-5">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>How Can We Love?</h2>
+    <div class="dh-q">Do I take up my cross today?</div>
+    <div class="dh-desc">The good news—the availability of the kingdom of God—is often neither heard, seen, understood, nor believed. Yet only through humility and seeking God's character of love do we begin to mature. As the hidden treasure comes into view—surpassing all else—it increasingly captures our hearts.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Greater Love Has No One</div>
+      <div class="pc-ref">John 15:13</div>
+      <div class="pc-sum">Love willingly lays itself down.</div>
+      <div class="pc-rq">Do I move toward sacrificial love?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>12</span>"This is My commandment, that you love one another, just as I have loved you. <span class='verse-num'>13</span>Greater love has no one than this, that one lay down his life for his friends."</div>
+    </div>
+  </div>
+  <a href="#fri-f-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-r-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Provision We Trust</h2>
+    <div class="dh-q">Do I trust God for provision today?</div>
+    <div class="dh-desc">Abiding in God means receiving His provision with gratitude rather than demanding our own. It is the daily practice of releasing anxiety to trust, knowing that the God who clothes the lilies and feeds the sparrows has not forgotten us.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Do Not Worry</div>
+      <div class="pc-ref">Matthew 6:25–34</div>
+      <div class="pc-sum">Anxiety shrinks when trust expands.</div>
+      <div class="pc-rq">Do I release my desires to God?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>25</span>"Do not be worried about your life, as to what you will eat or what you will drink. Is not life more than food, and the body more than clothing? <span class='verse-num'>26</span>Look at the birds of the air, that they do not sow, nor reap nor gather into barns, and yet your heavenly Father feeds them. Are you not worth much more than they? <span class='verse-num'>33</span>But seek first His kingdom and His righteousness, and all these things will be added to you."</div>
+    </div>
+  </div>
+  <a href="#fri-r-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-r-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Provision We Trust</h2>
+    <div class="dh-q">Do I trust God for provision today?</div>
+    <div class="dh-desc">Abiding in God means receiving His provision with gratitude rather than demanding our own. It is the daily practice of releasing anxiety to trust, knowing that the God who clothes the lilies and feeds the sparrows has not forgotten us.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Manna from Heaven</div>
+      <div class="pc-ref">Exodus 16</div>
+      <div class="pc-sum">Abiding receives God's way of provision.</div>
+      <div class="pc-rq">Do I accept God's provision even when it's not my preference?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>4</span>Then the Lord said to Moses, "Behold, I will rain bread from heaven for you; and the people shall go out and gather a day's portion every day, that I may test them, whether or not they will walk in My instruction." <span class='verse-num'>15</span>And Moses said to them, "It is the bread which the Lord has given you to eat."</div>
+    </div>
+  </div>
+  <a href="#fri-r-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-r-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Provision We Trust</h2>
+    <div class="dh-q">Do I trust God for provision today?</div>
+    <div class="dh-desc">Abiding in God means receiving His provision with gratitude rather than demanding our own. It is the daily practice of releasing anxiety to trust, knowing that the God who clothes the lilies and feeds the sparrows has not forgotten us.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Shepherd's Care</div>
+      <div class="pc-ref">Psalm 23</div>
+      <div class="pc-sum">Provision is relational before material.</div>
+      <div class="pc-rq">Do I rest in God's care?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>The Lord is my shepherd, I shall not want. <span class='verse-num'>2</span>He makes me lie down in green pastures; He leads me beside quiet waters. <span class='verse-num'>3</span>He restores my soul. <span class='verse-num'>4</span>Even though I walk through the valley of the shadow of death, I fear no evil, for You are with me. <span class='verse-num'>6</span>Surely goodness and lovingkindness will follow me all the days of my life, and I will dwell in the house of the Lord forever.</div>
+    </div>
+  </div>
+  <a href="#fri-r-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-r-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Provision We Trust</h2>
+    <div class="dh-q">Do I trust God for provision today?</div>
+    <div class="dh-desc">Abiding in God means receiving His provision with gratitude rather than demanding our own. It is the daily practice of releasing anxiety to trust, knowing that the God who clothes the lilies and feeds the sparrows has not forgotten us.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">God Supplies Every Need</div>
+      <div class="pc-ref">Philippians 4</div>
+      <div class="pc-sum">Provision meets us in contentment.</div>
+      <div class="pc-rq">Was I grateful rather than anxious?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>6</span>Be anxious for nothing, but in everything by prayer and supplication with thanksgiving let your requests be made known to God. <span class='verse-num'>7</span>And the peace of God, which surpasses all comprehension, will guard your hearts and your minds in Christ Jesus. <span class='verse-num'>19</span>And my God will supply all your needs according to His riches in glory in Christ Jesus.</div>
+    </div>
+  </div>
+  <a href="#fri-r-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="fri-r-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Friday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Provision We Trust</h2>
+    <div class="dh-q">Do I trust God for provision today?</div>
+    <div class="dh-desc">Abiding in God means receiving His provision with gratitude rather than demanding our own. It is the daily practice of releasing anxiety to trust, knowing that the God who clothes the lilies and feeds the sparrows has not forgotten us.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Water Into Wine</div>
+      <div class="pc-ref">John 2</div>
+      <div class="pc-sum">Abiding trusts God to supply what we lack.</div>
+      <div class="pc-rq">Do I bring my insufficiency to Christ?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>3</span>When the wine ran out, the mother of Jesus said to Him, "They have no wine." <span class='verse-num'>7</span>Jesus said to them, "Fill the waterpots with water." <span class='verse-num'>9</span>When the headwaiter tasted the water which had become wine, he called the bridegroom, <span class='verse-num'>10</span>and said, "You have kept the good wine until now."</div>
+    </div>
+  </div>
+  <a href="#fri-r-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-f-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Purpose?</h2>
+    <div class="dh-q">Am I reigning with God today?</div>
+    <div class="dh-desc">We are all created to rule with God in humility for good. This happens in and through personal relationships as friends of God, formed in His character of love. We look to the example of Jesus, resisting man's perspective of ruling and instead champion God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Creation of Humanity</div>
+      <div class="pc-ref">Genesis 1:26–27</div>
+      <div class="pc-sum">We are created to rule.</div>
+      <div class="pc-rq">Do I run with God today?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>26</span>Then God said, "Let Us make man in Our image, according to Our likeness; and let them rule over the fish of the sea and over the birds of the sky and over all the earth." <span class='verse-num'>28</span>God blessed them; and God said to them, "Be fruitful and multiply, and fill the earth, and subdue it."</div>
+    </div>
+  </div>
+  <a href="#sat-f-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-f-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Purpose?</h2>
+    <div class="dh-q">Am I reigning with God today?</div>
+    <div class="dh-desc">We are all created to rule with God in humility for good. This happens in and through personal relationships as friends of God, formed in His character of love. We look to the example of Jesus, resisting man's perspective of ruling and instead champion God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Salt and Light</div>
+      <div class="pc-ref">Matthew 5:13–16</div>
+      <div class="pc-sum">Purpose is influence toward goodness.</div>
+      <div class="pc-rq">Does my presence elevate environments?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>13</span>"You are the salt of the earth. <span class='verse-num'>14</span>You are the light of the world. A city set on a hill cannot be hidden. <span class='verse-num'>16</span>Let your light shine before men in such a way that they may see your good works, and glorify your Father who is in heaven."</div>
+    </div>
+  </div>
+  <a href="#sat-f-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-f-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Purpose?</h2>
+    <div class="dh-q">Am I reigning with God today?</div>
+    <div class="dh-desc">We are all created to rule with God in humility for good. This happens in and through personal relationships as friends of God, formed in His character of love. We look to the example of Jesus, resisting man's perspective of ruling and instead champion God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Serve Rather Than Be Served</div>
+      <div class="pc-ref">Mark 10:45</div>
+      <div class="pc-sum">Purpose is fulfilled through self-giving love.</div>
+      <div class="pc-rq">Do I use influence for good?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>43</span>"Whoever wishes to become great among you shall be your servant; <span class='verse-num'>45</span>For even the Son of Man did not come to be served, but to serve, and to give His life a ransom for many."</div>
+    </div>
+  </div>
+  <a href="#sat-f-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-f-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Purpose?</h2>
+    <div class="dh-q">Am I reigning with God today?</div>
+    <div class="dh-desc">We are all created to rule with God in humility for good. This happens in and through personal relationships as friends of God, formed in His character of love. We look to the example of Jesus, resisting man's perspective of ruling and instead champion God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Bear Much Fruit</div>
+      <div class="pc-ref">John 15:8</div>
+      <div class="pc-sum">Purpose is fruitfulness that glorifies God.</div>
+      <div class="pc-rq">Was my life fruitful today?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>5</span>"I am the vine, you are the branches; he who abides in Me and I in him, he bears much fruit, for apart from Me you can do nothing. <span class='verse-num'>8</span>My Father is glorified by this, that you bear much fruit, and so prove to be My disciples."</div>
+    </div>
+  </div>
+  <a href="#sat-f-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-f-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Purpose?</h2>
+    <div class="dh-q">Am I reigning with God today?</div>
+    <div class="dh-desc">We are all created to rule with God in humility for good. This happens in and through personal relationships as friends of God, formed in His character of love. We look to the example of Jesus, resisting man's perspective of ruling and instead champion God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Created for Good Works</div>
+      <div class="pc-ref">Ephesians 2</div>
+      <div class="pc-sum">Purpose is prepared beforehand.</div>
+      <div class="pc-rq">Do I walk attentively into opportunity?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>8</span>For by grace you have been saved through faith; and that not of yourselves, it is the gift of God; <span class='verse-num'>10</span>For we are His workmanship, created in Christ Jesus for good works, which God prepared beforehand so that we would walk in them.</div>
+    </div>
+  </div>
+  <a href="#sat-f-5" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-f-5">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>What Is Our Purpose?</h2>
+    <div class="dh-q">Am I reigning with God today?</div>
+    <div class="dh-desc">We are all created to rule with God in humility for good. This happens in and through personal relationships as friends of God, formed in His character of love. We look to the example of Jesus, resisting man's perspective of ruling and instead champion God's character of love.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Esther Risks Her Life</div>
+      <div class="pc-ref">Esther 4–7</div>
+      <div class="pc-sum">Purpose often emerges in crisis.</div>
+      <div class="pc-rq">Does courage guide me?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>14</span>"For if you remain silent at this time, relief and deliverance will arise for the Jews from another place and you and your father's house will perish. And who knows whether you have not attained royalty for such a time as this?" <span class='verse-num'>16</span>"I will go in to the king, which is not according to the law; and if I perish, I perish."</div>
+    </div>
+  </div>
+  <a href="#sat-f-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-r-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Forgiveness We Extend</h2>
+    <div class="dh-q">Forgiven — do I forgive others today?</div>
+    <div class="dh-desc">Forgiveness is the culture of the Kingdom. Because we have been forgiven an unpayable debt, we extend mercy freely—not as weakness, but as the deepest expression of God's character of love flowing through our lives.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Joseph Weeps Over His Brothers</div>
+      <div class="pc-ref">Genesis 45</div>
+      <div class="pc-sum">Character is displayed in forgiveness.</div>
+      <div class="pc-rq">Forgiven, do I forgive?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>4</span>"I am your brother Joseph, whom you sold into Egypt. <span class='verse-num'>5</span>Now do not be grieved or angry with yourselves, because you sold me here, for God sent me before you to preserve life." <span class='verse-num'>15</span>He kissed all his brothers and wept on them.</div>
+    </div>
+  </div>
+  <a href="#sat-r-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-r-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Forgiveness We Extend</h2>
+    <div class="dh-q">Forgiven — do I forgive others today?</div>
+    <div class="dh-desc">Forgiveness is the culture of the Kingdom. Because we have been forgiven an unpayable debt, we extend mercy freely—not as weakness, but as the deepest expression of God's character of love flowing through our lives.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Parable of the Unforgiving Servant</div>
+      <div class="pc-ref">Matthew 18:21–35</div>
+      <div class="pc-sum">Forgiveness is the culture of the Kingdom.</div>
+      <div class="pc-rq">Does mercy flow freely from me?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>21</span>Then Peter came and said, "Lord, how often shall my brother sin against me and I forgive him? Up to seven times?" <span class='verse-num'>22</span>Jesus said to him, "I do not say to you, up to seven times, but up to seventy times seven."</div>
+    </div>
+  </div>
+  <a href="#sat-r-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-r-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Forgiveness We Extend</h2>
+    <div class="dh-q">Forgiven — do I forgive others today?</div>
+    <div class="dh-desc">Forgiveness is the culture of the Kingdom. Because we have been forgiven an unpayable debt, we extend mercy freely—not as weakness, but as the deepest expression of God's character of love flowing through our lives.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">"Father, Forgive Them"</div>
+      <div class="pc-ref">Luke 23:34</div>
+      <div class="pc-sum">Forgiveness releases even the undeserving.</div>
+      <div class="pc-rq">Does mercy outrun offense?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>33</span>When they came to the place called The Skull, there they crucified Him. <span class='verse-num'>34</span>But Jesus was saying, "Father, forgive them; for they do not know what they are doing."</div>
+    </div>
+  </div>
+  <a href="#sat-r-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-r-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Forgiveness We Extend</h2>
+    <div class="dh-q">Forgiven — do I forgive others today?</div>
+    <div class="dh-desc">Forgiveness is the culture of the Kingdom. Because we have been forgiven an unpayable debt, we extend mercy freely—not as weakness, but as the deepest expression of God's character of love flowing through our lives.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Bear With One Another</div>
+      <div class="pc-ref">Colossians 3</div>
+      <div class="pc-sum">Forgiveness sustains unity.</div>
+      <div class="pc-rq">Does patience triumph over irritation?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>12</span>So, as those who have been chosen of God, holy and beloved, put on a heart of compassion, kindness, humility, gentleness and patience; <span class='verse-num'>13</span>bearing with one another, and forgiving each other, whoever has a complaint against anyone; just as the Lord forgave you, so also should you.</div>
+    </div>
+  </div>
+  <a href="#sat-r-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sat-r-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Saturday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Forgiveness We Extend</h2>
+    <div class="dh-q">Forgiven — do I forgive others today?</div>
+    <div class="dh-desc">Forgiveness is the culture of the Kingdom. Because we have been forgiven an unpayable debt, we extend mercy freely—not as weakness, but as the deepest expression of God's character of love flowing through our lives.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Peace Be With You</div>
+      <div class="pc-ref">John 20:19–23</div>
+      <div class="pc-sum">Forgiven people become carriers of forgiveness.</div>
+      <div class="pc-rq">Do I extend the mercy I have received?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>19</span>Jesus came and stood in their midst and said to them, "Peace be with you." <span class='verse-num'>21</span>"Peace be with you; as the Father has sent Me, I also send you." <span class='verse-num'>22</span>And when He had said this, He breathed on them and said to them, "Receive the Holy Spirit. <span class='verse-num'>23</span>If you forgive the sins of any, their sins have been forgiven them."</div>
+    </div>
+  </div>
+  <a href="#sat-r-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-f-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Joy We Cultivate</h2>
+    <div class="dh-q">Does my joy in God eclipse temptation today?</div>
+    <div class="dh-desc">Joy is not circumstantial but cultivated through communion with God. It deepens when we stop striving and delight in His presence, when we remember His faithfulness and rest in His love. It is the destiny of God's people.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Sabbath Rest</div>
+      <div class="pc-ref">Genesis 2</div>
+      <div class="pc-sum">Joy is found in communion, not man's power.</div>
+      <div class="pc-rq">Do I delight in God or reject rest?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>2</span>By the seventh day God completed His work which He had done, and He rested on the seventh day from all His work. <span class='verse-num'>3</span>Then God blessed the seventh day and sanctified it, because in it He rested from all His work which God had created and made.</div>
+    </div>
+  </div>
+  <a href="#sun-f-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-f-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Joy We Cultivate</h2>
+    <div class="dh-q">Does my joy in God eclipse temptation today?</div>
+    <div class="dh-desc">Joy is not circumstantial but cultivated through communion with God. It deepens when we stop striving and delight in His presence, when we remember His faithfulness and rest in His love. It is the destiny of God's people.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Beatitudes</div>
+      <div class="pc-ref">Matthew 5:1–12</div>
+      <div class="pc-sum">Life in the kingdom of God is joy.</div>
+      <div class="pc-rq">Does eternal joy anchor my emotions and actions?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>3</span>"Blessed are the poor in spirit, for theirs is the kingdom of heaven. <span class='verse-num'>4</span>Blessed are those who mourn, for they shall be comforted. <span class='verse-num'>11</span>Blessed are you when people insult you and persecute you, and falsely say all kinds of evil against you because of Me. <span class='verse-num'>12</span>Rejoice and be glad, for your reward in heaven is great."</div>
+    </div>
+  </div>
+  <a href="#sun-f-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-f-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Joy We Cultivate</h2>
+    <div class="dh-q">Does my joy in God eclipse temptation today?</div>
+    <div class="dh-desc">Joy is not circumstantial but cultivated through communion with God. It deepens when we stop striving and delight in His presence, when we remember His faithfulness and rest in His love. It is the destiny of God's people.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">"Come to Me… I Will Give You Rest"</div>
+      <div class="pc-ref">Matthew 11:28–30</div>
+      <div class="pc-sum">Rest is relational before it is physical.</div>
+      <div class="pc-rq">Do I receive Christ's rest?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>28</span>"Come to Me, all who are weary and heavy-laden, and I will give you rest. <span class='verse-num'>29</span>Take My yoke upon you and learn from Me, for I am gentle and humble in heart, and you will find rest for your souls. <span class='verse-num'>30</span>For My yoke is easy and My burden is light."</div>
+    </div>
+  </div>
+  <a href="#sun-f-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-f-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Joy We Cultivate</h2>
+    <div class="dh-q">Does my joy in God eclipse temptation today?</div>
+    <div class="dh-desc">Joy is not circumstantial but cultivated through communion with God. It deepens when we stop striving and delight in His presence, when we remember His faithfulness and rest in His love. It is the destiny of God's people.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">"That My Joy May Be in You"</div>
+      <div class="pc-ref">John 15:11</div>
+      <div class="pc-sum">Joy grows from abiding in love.</div>
+      <div class="pc-rq">Do I remain in God's love today?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>9</span>"Just as the Father has loved Me, I have also loved you; abide in My love. <span class='verse-num'>11</span>These things I have spoken to you so that My joy may be in you, and that your joy may be made full."</div>
+    </div>
+  </div>
+  <a href="#sun-f-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-f-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type f">Life's Fundamental</div>
+    <h2>Joy We Cultivate</h2>
+    <div class="dh-q">Does my joy in God eclipse temptation today?</div>
+    <div class="dh-desc">Joy is not circumstantial but cultivated through communion with God. It deepens when we stop striving and delight in His presence, when we remember His faithfulness and rest in His love. It is the destiny of God's people.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">Rejoice in the Lord Always</div>
+      <div class="pc-ref">Philippians 4</div>
+      <div class="pc-sum">Joy is cultivated, not circumstantial.</div>
+      <div class="pc-rq">Do I choose joy?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>4</span>Rejoice in the Lord always; again I will say, rejoice! <span class='verse-num'>6</span>Be anxious for nothing, but in everything by prayer and supplication with thanksgiving let your requests be made known to God. <span class='verse-num'>7</span>And the peace of God, which surpasses all comprehension, will guard your hearts and your minds in Christ Jesus.</div>
+    </div>
+  </div>
+  <a href="#sun-f-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-r-0">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Deliverance We Receive</h2>
+    <div class="dh-q">Does abiding position me for deliverance?</div>
+    <div class="dh-desc">Deliverance is not earned by effort but received through trust. It flows through surrendered will, readiness, and the finished work of Christ. Our future restoration shapes how we interpret today.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">"It Is Finished"</div>
+      <div class="pc-ref">John 19:30</div>
+      <div class="pc-sum">Deliverance is accomplished by Christ, not earned by us.</div>
+      <div class="pc-rq">Do I rest in Christ's finished work?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>28</span>After this, Jesus, knowing that all things had already been accomplished, said, "I am thirsty." <span class='verse-num'>30</span>When Jesus had received the sour wine, He said, "It is finished!" And He bowed His head and gave up His spirit.</div>
+    </div>
+  </div>
+  <a href="#sun-r-1" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-r-1">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Deliverance We Receive</h2>
+    <div class="dh-q">Does abiding position me for deliverance?</div>
+    <div class="dh-desc">Deliverance is not earned by effort but received through trust. It flows through surrendered will, readiness, and the finished work of Christ. Our future restoration shapes how we interpret today.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">More Than Conquerors</div>
+      <div class="pc-ref">Romans 8</div>
+      <div class="pc-sum">Deliverance is rooted in God's love.</div>
+      <div class="pc-rq">Does security replace fear?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>31</span>What then shall we say to these things? If God is for us, who is against us? <span class='verse-num'>37</span>But in all these things we overwhelmingly conquer through Him who loved us. <span class='verse-num'>38</span>For I am convinced that neither death, nor life, nor angels, nor principalities, nor things present, nor things to come, <span class='verse-num'>39</span>nor any other created thing, will be able to separate us from the love of God, which is in Christ Jesus our Lord.</div>
+    </div>
+  </div>
+  <a href="#sun-r-2" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-r-2">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Deliverance We Receive</h2>
+    <div class="dh-q">Does abiding position me for deliverance?</div>
+    <div class="dh-desc">Deliverance is not earned by effort but received through trust. It flows through surrendered will, readiness, and the finished work of Christ. Our future restoration shapes how we interpret today.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The Armor of God</div>
+      <div class="pc-ref">Ephesians 6</div>
+      <div class="pc-sum">Deliverance requires readiness.</div>
+      <div class="pc-rq">Do I stand spiritually prepared?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>10</span>Finally, be strong in the Lord and in the strength of His might. <span class='verse-num'>11</span>Put on the full armor of God, so that you will be able to stand firm against the schemes of the devil. <span class='verse-num'>13</span>Therefore, take up the full armor of God, so that you will be able to resist in the evil day, and having done everything, to stand firm.</div>
+    </div>
+  </div>
+  <a href="#sun-r-3" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-r-3">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Deliverance We Receive</h2>
+    <div class="dh-q">Does abiding position me for deliverance?</div>
+    <div class="dh-desc">Deliverance is not earned by effort but received through trust. It flows through surrendered will, readiness, and the finished work of Christ. Our future restoration shapes how we interpret today.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">The New Heaven and New Earth</div>
+      <div class="pc-ref">Revelation 21–22</div>
+      <div class="pc-sum">Deliverance ends in total renewal.</div>
+      <div class="pc-rq">Does future restoration interpret today?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>1</span>Then I saw a new heaven and a new earth. <span class='verse-num'>3</span>"Behold, the tabernacle of God is among men, and He will dwell among them, and they shall be His people. <span class='verse-num'>4</span>And He will wipe away every tear from their eyes; and there will no longer be any death; there will no longer be any mourning, or crying, or pain; the first things have passed away."</div>
+    </div>
+  </div>
+  <a href="#sun-r-4" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<div class="page" id="sun-r-4">
+  <a href="#home" class="back">&#8592; Overview</a>
+  <div class="dh">
+    <div class="dh-day">Sunday</div>
+    <div class="dh-type r">Responding Well</div>
+    <h2>Deliverance We Receive</h2>
+    <div class="dh-q">Does abiding position me for deliverance?</div>
+    <div class="dh-desc">Deliverance is not earned by effort but received through trust. It flows through surrendered will, readiness, and the finished work of Christ. Our future restoration shapes how we interpret today.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-head">
+      <div class="pc-t">"Peace, Be Still"</div>
+      <div class="pc-ref">Mark 4:39</div>
+      <div class="pc-sum">Deliverance often begins with trusting Christ's presence.</div>
+      <div class="pc-rq">Do I rest in God amid turmoil?</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-sl">Scripture</div>
+      <div class="pc-sc"><span class='verse-num'>37</span>And there arose a fierce gale of wind, and the waves were breaking over the boat. <span class='verse-num'>38</span>They woke Him and said, "Teacher, do You not care that we are perishing?" <span class='verse-num'>39</span>And He got up and rebuked the wind and said to the sea, "Hush, be still." And the wind died down and it became perfectly calm. <span class='verse-num'>40</span>And He said to them, "Why are you afraid? Do you still have no faith?"</div>
+    </div>
+  </div>
+  <a href="#sun-r-0" class="more-link">&#8635; Another Passage</a>
+  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
+</div>
+
+<!-- OVERVIEW -->
+<div class="page" id="home">
+  <div class="ov-intro">Each day explores a fundamental question of life paired with a practice of responding well. Choose a topic to receive today's passage.</div>
+  <div class="day-row">
+    <div class="dr-label"><span>Monday</span></div>
+    <a href="#mon-f-2" class="tc">
+      <span class="tc-type f">Life's Fundamental</span>
+      <span class="tc-title">What Is Reality?</span>
+      <span class="tc-q">Am I growing in God’s reality?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+    <a href="#mon-r-1" class="tc">
+      <span class="tc-type r">Responding Well</span>
+      <span class="tc-title">Authority We Choose</span>
+      <span class="tc-q">Do I live by God’s authority today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+  </div>
+  <div class="day-row">
+    <div class="dr-label"><span>Tuesday</span></div>
+    <a href="#tue-f-2" class="tc">
+      <span class="tc-type f">Life's Fundamental</span>
+      <span class="tc-title">Who Are We?</span>
+      <span class="tc-q">Do I live as a personal, spiritual, eternal being today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+    <a href="#tue-r-2" class="tc">
+      <span class="tc-type r">Responding Well</span>
+      <span class="tc-title">Discipleship We Practice</span>
+      <span class="tc-q">Do I live as a disciple of God today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+  </div>
+  <div class="day-row">
+    <div class="dr-label"><span>Wednesday</span></div>
+    <a href="#wed-f-0" class="tc">
+      <span class="tc-type f">Life's Fundamental</span>
+      <span class="tc-title">What Is Our Life About?</span>
+      <span class="tc-q">Am I pursuing God’s character in humility today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+    <a href="#wed-r-4" class="tc">
+      <span class="tc-type r">Responding Well</span>
+      <span class="tc-title">Image We Pursue</span>
+      <span class="tc-q">Do I live in the name of the Trinity today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+  </div>
+  <div class="day-row">
+    <div class="dr-label"><span>Thursday</span></div>
+    <a href="#thu-f-5" class="tc">
+      <span class="tc-type f">Life's Fundamental</span>
+      <span class="tc-title">How Are We To Live?</span>
+      <span class="tc-q">Do I live on the rock today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+    <a href="#thu-r-2" class="tc">
+      <span class="tc-type r">Responding Well</span>
+      <span class="tc-title">Education We Deepen</span>
+      <span class="tc-q">Am I deepening my beliefs in God’s commands today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+  </div>
+  <div class="day-row">
+    <div class="dr-label"><span>Friday</span></div>
+    <a href="#fri-f-5" class="tc">
+      <span class="tc-type f">Life's Fundamental</span>
+      <span class="tc-title">How Can We Love?</span>
+      <span class="tc-q">Do I take up my cross today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+    <a href="#fri-r-1" class="tc">
+      <span class="tc-type r">Responding Well</span>
+      <span class="tc-title">Provision We Trust</span>
+      <span class="tc-q">Do I trust God for provision today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+  </div>
+  <div class="day-row">
+    <div class="dr-label"><span>Saturday</span></div>
+    <a href="#sat-f-2" class="tc">
+      <span class="tc-type f">Life's Fundamental</span>
+      <span class="tc-title">What Is Our Purpose?</span>
+      <span class="tc-q">Am I reigning with God today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+    <a href="#sat-r-2" class="tc">
+      <span class="tc-type r">Responding Well</span>
+      <span class="tc-title">Forgiveness We Extend</span>
+      <span class="tc-q">Forgiven — do I forgive others today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+  </div>
+  <div class="day-row">
+    <div class="dr-label"><span>Sunday</span></div>
+    <a href="#sun-f-4" class="tc">
+      <span class="tc-type f">Life's Fundamental</span>
+      <span class="tc-title">Joy We Cultivate</span>
+      <span class="tc-q">Does my joy in God eclipse temptation today?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+    <a href="#sun-r-0" class="tc">
+      <span class="tc-type r">Responding Well</span>
+      <span class="tc-title">Deliverance We Receive</span>
+      <span class="tc-q">Does abiding position me for deliverance?</span>
+      <span class="tc-arrow">&#8250;</span>
+    </a>
+  </div>
+</div>
+
+<footer class="ft"><span class="o">&#10022;</span>The Joy Set Before Us</footer>
+</body>
+</html>
