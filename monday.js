@@ -10,7 +10,7 @@ module.exports = {
   // LIFE'S FUNDAMENTAL: What Is Reality?
   // ──────────────────────────────────────────────
   fundamental: {
-    title: 'What Is Reality?',
+    title: 'What Is Reality? TEST',
     question: 'Am I growing in God\'s reality?',
     description:
       'Reality is the Author that has defined and created the nature, design, context, ' +
