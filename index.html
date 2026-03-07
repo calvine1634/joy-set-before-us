@@ -70,8 +70,6 @@ body {
 }
 
 /* ============ PAGE SYSTEM ============ */
-/* Overview is shown by default. Detail pages hidden. */
-/* When a detail :target is active, it shows and overview hides. */
 .page {
   display: none;
   max-width: 720px;
@@ -80,12 +78,8 @@ body {
 }
 .page:target { display: block; }
 
-/* Overview is special — shown when NO hash or #home */
 #home { display: block; }
 #home:target { display: block; }
-/* Hide #home when ANY other page is targeted */
-/* CSS trick: pages come before #home; when targeted they set display, 
-   and we use ~ to hide home */
 .page:target ~ #home { display: none; }
 
 /* ============ OVERVIEW ============ */
@@ -342,6 +336,7 @@ body {
   .pc-t { font-size: 1.2rem; }
   .pc-sc { font-size: .98rem; line-height: 1.9; }
 }
+
 </style>
 </head>
 <body>
@@ -354,13 +349,14 @@ body {
   </div>
 </header>
 
+
 <div class="page" id="mon-f-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
@@ -378,14 +374,13 @@ body {
   <a href="#mon-f-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-f-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
@@ -393,7 +388,7 @@ body {
       <div class="pc-t">Tower of Babel</div>
       <div class="pc-ref">Genesis 11</div>
       <div class="pc-sum">Man attempts to define reality and value.</div>
-      <div class="pc-rq">Do I live believing in God’s reality or man’s?</div>
+      <div class="pc-rq">Do I live believing in God's reality or man's?</div>
     </div>
     <div class="pc-body">
       <div class="pc-sl">Scripture</div>
@@ -403,20 +398,19 @@ body {
   <a href="#mon-f-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-f-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
     <div class="pc-head">
       <div class="pc-t">Hagar in the Wilderness</div>
-      <div class="pc-ref">Genesis 16 & 21</div>
+      <div class="pc-ref">Genesis 16 &amp; 21</div>
       <div class="pc-sum">Reality is found in God even when abandoned by people.</div>
       <div class="pc-rq">Do I live knowing that God sees me?</div>
     </div>
@@ -428,14 +422,13 @@ body {
   <a href="#mon-f-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-f-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
@@ -453,14 +446,13 @@ body {
   <a href="#mon-f-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-f-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
@@ -478,19 +470,18 @@ body {
   <a href="#mon-f-5" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-f-5">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
     <div class="pc-head">
-      <div class="pc-t">"I AM"</div>
+      <div class="pc-t">&quot;I AM&quot;</div>
       <div class="pc-ref">Exodus 3:13–15</div>
       <div class="pc-sum">Reality is grounded in the eternal God, not shifting circumstance.</div>
       <div class="pc-rq">Do I anchor my living, my beliefs and values, in God?</div>
@@ -503,14 +494,13 @@ body {
   <a href="#mon-f-6" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-f-6">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
@@ -528,14 +518,13 @@ body {
   <a href="#mon-f-7" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-f-7">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
@@ -553,14 +542,13 @@ body {
   <a href="#mon-f-8" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-f-8">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
@@ -578,14 +566,13 @@ body {
   <a href="#mon-f-9" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-f-9">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Reality?</h2>
-    <div class="dh-q">Am I growing in God’s reality?</div>
+    <div class="dh-q">Am I growing in God's reality?</div>
     <div class="dh-desc">Reality is the Author that has defined and created the nature, design, context, morality and purpose of everything that exists. We know there is an Author because nothing comes from nothing and nothing in the universe is the source of itself. Our knowledge of reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.</div>
   </div>
   <div class="pc">
@@ -603,14 +590,13 @@ body {
   <a href="#mon-f-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-r-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Authority We Choose</h2>
-    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-q">Do I live by God's authority today?</div>
     <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
   </div>
   <div class="pc">
@@ -628,14 +614,13 @@ body {
   <a href="#mon-r-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-r-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Authority We Choose</h2>
-    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-q">Do I live by God's authority today?</div>
     <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
   </div>
   <div class="pc">
@@ -653,14 +638,13 @@ body {
   <a href="#mon-r-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-r-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Authority We Choose</h2>
-    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-q">Do I live by God's authority today?</div>
     <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
   </div>
   <div class="pc">
@@ -678,14 +662,13 @@ body {
   <a href="#mon-r-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-r-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Authority We Choose</h2>
-    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-q">Do I live by God's authority today?</div>
     <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
   </div>
   <div class="pc">
@@ -703,14 +686,13 @@ body {
   <a href="#mon-r-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-r-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Authority We Choose</h2>
-    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-q">Do I live by God's authority today?</div>
     <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
   </div>
   <div class="pc">
@@ -728,14 +710,13 @@ body {
   <a href="#mon-r-5" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-r-5">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Authority We Choose</h2>
-    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-q">Do I live by God's authority today?</div>
     <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
   </div>
   <div class="pc">
@@ -753,14 +734,13 @@ body {
   <a href="#mon-r-6" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="mon-r-6">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Monday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Authority We Choose</h2>
-    <div class="dh-q">Do I live by God’s authority today?</div>
+    <div class="dh-q">Do I live by God's authority today?</div>
     <div class="dh-desc">We are all responding to the responsibility of life we have been given as we choose an authority, discipleship, identity, education, and source of life to abide in. Responding well is to increasingly choose God and His character of love in each of these endeavors which governs our life.</div>
   </div>
   <div class="pc">
@@ -778,7 +758,6 @@ body {
   <a href="#mon-r-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-f-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -803,7 +782,6 @@ body {
   <a href="#tue-f-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-f-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -828,7 +806,6 @@ body {
   <a href="#tue-f-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-f-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -853,7 +830,6 @@ body {
   <a href="#tue-f-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-f-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -878,7 +854,6 @@ body {
   <a href="#tue-f-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-f-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -903,7 +878,6 @@ body {
   <a href="#tue-f-5" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-f-5">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -928,7 +902,6 @@ body {
   <a href="#tue-f-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-r-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -953,7 +926,6 @@ body {
   <a href="#tue-r-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-r-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -978,7 +950,6 @@ body {
   <a href="#tue-r-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-r-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1003,7 +974,6 @@ body {
   <a href="#tue-r-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-r-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1028,7 +998,6 @@ body {
   <a href="#tue-r-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-r-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1053,7 +1022,6 @@ body {
   <a href="#tue-r-5" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="tue-r-5">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1078,14 +1046,13 @@ body {
   <a href="#tue-r-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-f-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Wednesday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Our Life About?</h2>
-    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-q">Am I pursuing God's character in humility today?</div>
     <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
   </div>
   <div class="pc">
@@ -1103,14 +1070,13 @@ body {
   <a href="#wed-f-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-f-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Wednesday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Our Life About?</h2>
-    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-q">Am I pursuing God's character in humility today?</div>
     <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
   </div>
   <div class="pc">
@@ -1128,14 +1094,13 @@ body {
   <a href="#wed-f-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-f-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Wednesday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Our Life About?</h2>
-    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-q">Am I pursuing God's character in humility today?</div>
     <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
   </div>
   <div class="pc">
@@ -1153,14 +1118,13 @@ body {
   <a href="#wed-f-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-f-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Wednesday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Our Life About?</h2>
-    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-q">Am I pursuing God's character in humility today?</div>
     <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
   </div>
   <div class="pc">
@@ -1178,14 +1142,13 @@ body {
   <a href="#wed-f-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-f-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Wednesday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Our Life About?</h2>
-    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-q">Am I pursuing God's character in humility today?</div>
     <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
   </div>
   <div class="pc">
@@ -1203,14 +1166,13 @@ body {
   <a href="#wed-f-5" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-f-5">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Wednesday</div>
     <div class="dh-type f">Life's Fundamental</div>
     <h2>What Is Our Life About?</h2>
-    <div class="dh-q">Am I pursuing God’s character in humility today?</div>
+    <div class="dh-q">Am I pursuing God's character in humility today?</div>
     <div class="dh-desc">We are personal beings responsible for choosing, maturing, believing, and desiring the kind of relationships we will increasingly pursue for eternity. The character we increasingly cultivate identifies what we understand and who we are becoming: either pride rooted in man's power or humility rooted in God's character of love—life in the Kingdom of God.</div>
   </div>
   <div class="pc">
@@ -1228,7 +1190,6 @@ body {
   <a href="#wed-f-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-r-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1253,7 +1214,6 @@ body {
   <a href="#wed-r-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-r-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1278,7 +1238,6 @@ body {
   <a href="#wed-r-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-r-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1290,7 +1249,7 @@ body {
   </div>
   <div class="pc">
     <div class="pc-head">
-      <div class="pc-t">"Anyone Who Has Seen Me…"</div>
+      <div class="pc-t">&quot;Anyone Who Has Seen Me…&quot;</div>
       <div class="pc-ref">John 14:9</div>
       <div class="pc-sum">Image-bearing reflects the character of God.</div>
       <div class="pc-rq">Does my life make God more visible?</div>
@@ -1303,7 +1262,6 @@ body {
   <a href="#wed-r-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-r-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1328,7 +1286,6 @@ body {
   <a href="#wed-r-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="wed-r-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1353,7 +1310,6 @@ body {
   <a href="#wed-r-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-f-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1378,7 +1334,6 @@ body {
   <a href="#thu-f-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-f-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1403,7 +1358,6 @@ body {
   <a href="#thu-f-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-f-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1428,7 +1382,6 @@ body {
   <a href="#thu-f-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-f-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1453,7 +1406,6 @@ body {
   <a href="#thu-f-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-f-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1478,7 +1430,6 @@ body {
   <a href="#thu-f-5" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-f-5">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1503,14 +1454,13 @@ body {
   <a href="#thu-f-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-r-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Thursday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Education We Deepen</h2>
-    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-q">Am I deepening my beliefs in God's commands today?</div>
     <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
   </div>
   <div class="pc">
@@ -1528,14 +1478,13 @@ body {
   <a href="#thu-r-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-r-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Thursday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Education We Deepen</h2>
-    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-q">Am I deepening my beliefs in God's commands today?</div>
     <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
   </div>
   <div class="pc">
@@ -1553,14 +1502,13 @@ body {
   <a href="#thu-r-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-r-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Thursday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Education We Deepen</h2>
-    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-q">Am I deepening my beliefs in God's commands today?</div>
     <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
   </div>
   <div class="pc">
@@ -1578,14 +1526,13 @@ body {
   <a href="#thu-r-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-r-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Thursday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Education We Deepen</h2>
-    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-q">Am I deepening my beliefs in God's commands today?</div>
     <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
   </div>
   <div class="pc">
@@ -1603,14 +1550,13 @@ body {
   <a href="#thu-r-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="thu-r-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">Thursday</div>
     <div class="dh-type r">Responding Well</div>
     <h2>Education We Deepen</h2>
-    <div class="dh-q">Am I deepening my beliefs in God’s commands today?</div>
+    <div class="dh-q">Am I deepening my beliefs in God's commands today?</div>
     <div class="dh-desc">Spiritual education is not accumulation of facts but the formation of a heart that increasingly believes and desires God. It happens through Scripture, the Spirit, community, and the rhythm of daily obedience.</div>
   </div>
   <div class="pc">
@@ -1628,7 +1574,6 @@ body {
   <a href="#thu-r-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-f-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1653,7 +1598,6 @@ body {
   <a href="#fri-f-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-f-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1678,7 +1622,6 @@ body {
   <a href="#fri-f-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-f-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1703,7 +1646,6 @@ body {
   <a href="#fri-f-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-f-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1728,7 +1670,6 @@ body {
   <a href="#fri-f-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-f-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1753,7 +1694,6 @@ body {
   <a href="#fri-f-5" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-f-5">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1778,7 +1718,6 @@ body {
   <a href="#fri-f-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-r-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1803,7 +1742,6 @@ body {
   <a href="#fri-r-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-r-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1828,7 +1766,6 @@ body {
   <a href="#fri-r-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-r-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1853,7 +1790,6 @@ body {
   <a href="#fri-r-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-r-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1878,7 +1814,6 @@ body {
   <a href="#fri-r-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="fri-r-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1903,7 +1838,6 @@ body {
   <a href="#fri-r-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-f-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1928,7 +1862,6 @@ body {
   <a href="#sat-f-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-f-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1953,7 +1886,6 @@ body {
   <a href="#sat-f-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-f-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -1978,7 +1910,6 @@ body {
   <a href="#sat-f-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-f-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2003,7 +1934,6 @@ body {
   <a href="#sat-f-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-f-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2028,7 +1958,6 @@ body {
   <a href="#sat-f-5" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-f-5">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2053,7 +1982,6 @@ body {
   <a href="#sat-f-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-r-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2078,7 +2006,6 @@ body {
   <a href="#sat-r-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-r-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2103,7 +2030,6 @@ body {
   <a href="#sat-r-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-r-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2115,7 +2041,7 @@ body {
   </div>
   <div class="pc">
     <div class="pc-head">
-      <div class="pc-t">"Father, Forgive Them"</div>
+      <div class="pc-t">&quot;Father, Forgive Them&quot;</div>
       <div class="pc-ref">Luke 23:34</div>
       <div class="pc-sum">Forgiveness releases even the undeserving.</div>
       <div class="pc-rq">Does mercy outrun offense?</div>
@@ -2128,7 +2054,6 @@ body {
   <a href="#sat-r-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-r-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2153,7 +2078,6 @@ body {
   <a href="#sat-r-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sat-r-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2178,7 +2102,6 @@ body {
   <a href="#sat-r-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-f-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2203,7 +2126,6 @@ body {
   <a href="#sun-f-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-f-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2228,7 +2150,6 @@ body {
   <a href="#sun-f-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-f-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2240,7 +2161,7 @@ body {
   </div>
   <div class="pc">
     <div class="pc-head">
-      <div class="pc-t">"Come to Me… I Will Give You Rest"</div>
+      <div class="pc-t">&quot;Come to Me… I Will Give You Rest&quot;</div>
       <div class="pc-ref">Matthew 11:28–30</div>
       <div class="pc-sum">Rest is relational before it is physical.</div>
       <div class="pc-rq">Do I receive Christ's rest?</div>
@@ -2253,7 +2174,6 @@ body {
   <a href="#sun-f-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-f-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2265,7 +2185,7 @@ body {
   </div>
   <div class="pc">
     <div class="pc-head">
-      <div class="pc-t">"That My Joy May Be in You"</div>
+      <div class="pc-t">&quot;That My Joy May Be in You&quot;</div>
       <div class="pc-ref">John 15:11</div>
       <div class="pc-sum">Joy grows from abiding in love.</div>
       <div class="pc-rq">Do I remain in God's love today?</div>
@@ -2278,7 +2198,6 @@ body {
   <a href="#sun-f-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-f-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2303,7 +2222,6 @@ body {
   <a href="#sun-f-0" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-r-0">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2315,7 +2233,7 @@ body {
   </div>
   <div class="pc">
     <div class="pc-head">
-      <div class="pc-t">"It Is Finished"</div>
+      <div class="pc-t">&quot;It Is Finished&quot;</div>
       <div class="pc-ref">John 19:30</div>
       <div class="pc-sum">Deliverance is accomplished by Christ, not earned by us.</div>
       <div class="pc-rq">Do I rest in Christ's finished work?</div>
@@ -2328,7 +2246,6 @@ body {
   <a href="#sun-r-1" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-r-1">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2353,7 +2270,6 @@ body {
   <a href="#sun-r-2" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-r-2">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2378,7 +2294,6 @@ body {
   <a href="#sun-r-3" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-r-3">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2403,7 +2318,6 @@ body {
   <a href="#sun-r-4" class="more-link">&#8635; Another Passage</a>
   <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>
-
 <div class="page" id="sun-r-4">
   <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
@@ -2415,7 +2329,7 @@ body {
   </div>
   <div class="pc">
     <div class="pc-head">
-      <div class="pc-t">"Peace, Be Still"</div>
+      <div class="pc-t">&quot;Peace, Be Still&quot;</div>
       <div class="pc-ref">Mark 4:39</div>
       <div class="pc-sum">Deliverance often begins with trusting Christ's presence.</div>
       <div class="pc-rq">Do I rest in God amid turmoil?</div>
@@ -2432,30 +2346,31 @@ body {
 <!-- OVERVIEW -->
 <div class="page" id="home">
   <div class="ov-intro">Each day explores a fundamental question of life paired with a practice of responding well. Choose a topic to receive today's passage.</div>
+
   <div class="day-row">
     <div class="dr-label"><span>Monday</span></div>
-    <a href="#mon-f-2" class="tc">
+    <a href="#mon-f-0" class="tc">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">What Is Reality?</span>
-      <span class="tc-q">Am I growing in God’s reality?</span>
+      <span class="tc-q">Am I growing in God's reality?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#mon-r-1" class="tc">
+    <a href="#mon-r-0" class="tc">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Authority We Choose</span>
-      <span class="tc-q">Do I live by God’s authority today?</span>
+      <span class="tc-q">Do I live by God's authority today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
   </div>
   <div class="day-row">
     <div class="dr-label"><span>Tuesday</span></div>
-    <a href="#tue-f-2" class="tc">
+    <a href="#tue-f-1" class="tc">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">Who Are We?</span>
       <span class="tc-q">Do I live as a personal, spiritual, eternal being today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#tue-r-2" class="tc">
+    <a href="#tue-r-1" class="tc">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Discipleship We Practice</span>
       <span class="tc-q">Do I live as a disciple of God today?</span>
@@ -2464,13 +2379,13 @@ body {
   </div>
   <div class="day-row">
     <div class="dr-label"><span>Wednesday</span></div>
-    <a href="#wed-f-0" class="tc">
+    <a href="#wed-f-2" class="tc">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">What Is Our Life About?</span>
-      <span class="tc-q">Am I pursuing God’s character in humility today?</span>
+      <span class="tc-q">Am I pursuing God's character in humility today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#wed-r-4" class="tc">
+    <a href="#wed-r-2" class="tc">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Image We Pursue</span>
       <span class="tc-q">Do I live in the name of the Trinity today?</span>
@@ -2479,28 +2394,28 @@ body {
   </div>
   <div class="day-row">
     <div class="dr-label"><span>Thursday</span></div>
-    <a href="#thu-f-5" class="tc">
+    <a href="#thu-f-3" class="tc">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">How Are We To Live?</span>
       <span class="tc-q">Do I live on the rock today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#thu-r-2" class="tc">
+    <a href="#thu-r-3" class="tc">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Education We Deepen</span>
-      <span class="tc-q">Am I deepening my beliefs in God’s commands today?</span>
+      <span class="tc-q">Am I deepening my beliefs in God's commands today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
   </div>
   <div class="day-row">
     <div class="dr-label"><span>Friday</span></div>
-    <a href="#fri-f-5" class="tc">
+    <a href="#fri-f-4" class="tc">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">How Can We Love?</span>
       <span class="tc-q">Do I take up my cross today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#fri-r-1" class="tc">
+    <a href="#fri-r-4" class="tc">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Provision We Trust</span>
       <span class="tc-q">Do I trust God for provision today?</span>
@@ -2509,13 +2424,13 @@ body {
   </div>
   <div class="day-row">
     <div class="dr-label"><span>Saturday</span></div>
-    <a href="#sat-f-2" class="tc">
+    <a href="#sat-f-5" class="tc">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">What Is Our Purpose?</span>
       <span class="tc-q">Am I reigning with God today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#sat-r-2" class="tc">
+    <a href="#sat-r-0" class="tc">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Forgiveness We Extend</span>
       <span class="tc-q">Forgiven — do I forgive others today?</span>
@@ -2524,13 +2439,13 @@ body {
   </div>
   <div class="day-row">
     <div class="dr-label"><span>Sunday</span></div>
-    <a href="#sun-f-4" class="tc">
+    <a href="#sun-f-1" class="tc">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">Joy We Cultivate</span>
       <span class="tc-q">Does my joy in God eclipse temptation today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#sun-r-0" class="tc">
+    <a href="#sun-r-1" class="tc">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Deliverance We Receive</span>
       <span class="tc-q">Does abiding position me for deliverance?</span>
