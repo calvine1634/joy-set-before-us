@@ -18,7 +18,7 @@ module.exports = {
       'nothing comes from nothing and nothing in the universe is the source of itself. Our ' +
       'knowledge of reality is only found in and through God, as He engages us through ' +
       'creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, ' +
-      'the Saints, and history.',
+      'the Saints, and history.  EVEN MORE TESTING',
 
     passages: [
       {
