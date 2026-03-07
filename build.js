@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 // ============================================================
-// BUILD SCRIPT — Generates index.html from content.js
+// BUILD SCRIPT — Generates index.html from content/ folder
 // ============================================================
 // Usage:  node build.js
 // Output: index.html (in same directory)
 //
-// This reads content.js and produces the full static HTML site.
-// Edit content.js to change any text, then re-run this script.
+// Edit files in content/ to change any text, then re-run this script.
 // ============================================================
 
 const fs = require('fs');
 const path = require('path');
-const { SITE_META, DAYS } = require('./content.js');
+const { SITE_META, DAYS } = require('./content/index.js');
 
 // Helper: escape HTML entities
 function esc(str) {
@@ -61,7 +60,7 @@ function buildDetailPage(dayKey, dayLabel, type, topic, passageIndex, passages) 
 </div>`;
 }
 
-// Helper: pick a starting passage index for overview links (varies by day for variety)
+// Helper: pick a starting passage index for overview links
 function pickStartIndex(passages, dayIndex) {
   return dayIndex % passages.length;
 }
@@ -73,11 +72,9 @@ function pickStartIndex(passages, dayIndex) {
 // 1. Build all detail pages
 let detailPages = '';
 DAYS.forEach((day) => {
-  // Fundamental passages
   day.fundamental.passages.forEach((_, i) => {
     detailPages += buildDetailPage(day.key, day.label, 'fundamental', day.fundamental, i, day.fundamental.passages);
   });
-  // Response passages
   day.response.passages.forEach((_, i) => {
     detailPages += buildDetailPage(day.key, day.label, 'response', day.response, i, day.response.passages);
   });
@@ -107,7 +104,7 @@ DAYS.forEach((day, dayIndex) => {
   </div>`;
 });
 
-// 3. Read the CSS template (inline in this script for portability)
+// 3. Read CSS
 const css = fs.readFileSync(path.join(__dirname, 'styles.css'), 'utf8');
 
 // 4. Assemble full HTML
