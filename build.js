@@ -30,8 +30,6 @@ function buildDetailPage(dayKey, dayLabel, type, topic, passageIndex, passages) 
   const typeLabel = type === 'fundamental' ? "Life's Fundamental" : 'Responding Well';
   const id = `${dayKey}-${typeKey}-${passageIndex}`;
   const p = passages[passageIndex];
-  const nextIndex = (passageIndex + 1) % passages.length;
-  const nextId = `${dayKey}-${typeKey}-${nextIndex}`;
 
   return `
 <div class="page" id="${id}">
@@ -55,8 +53,6 @@ function buildDetailPage(dayKey, dayLabel, type, topic, passageIndex, passages) 
       <div class="pc-sc">${renderVerses(p.verses)}</div>
     </div>
   </div>
-  <a href="#${nextId}" class="more-link">&#8635; Another Passage</a>
-  <div class="ra"><h4>Reflections</h4><textarea placeholder="Write your reflections here..."></textarea></div>
 </div>`;
 }
 

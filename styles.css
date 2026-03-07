@@ -274,49 +274,6 @@ body {
   margin-right: 2px;
 }
 
-/* More passages link */
-.more-link {
-  display: block;
-  text-align: center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: .08em;
-  border: 1px solid var(--gold-pale);
-  background: rgba(184,148,62,.05);
-  text-decoration: none;
-  padding: .7rem 1.2rem;
-  border-radius: 4px;
-  min-height: 44px;
-  line-height: 44px;
-  margin-bottom: 1.5rem;
-}
-.more-link:active { background: var(--gold); color: #fff; border-color: var(--gold); }
-
-/* Reflection */
-.ra {
-  padding: 1.3rem;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-}
-.ra h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 500; margin-bottom: .5rem; }
-.ra textarea {
-  width: 100%;
-  min-height: 80px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: .8rem;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--ink);
-  background: var(--cream);
-  resize: vertical;
-}
-.ra textarea:focus { outline: none; border-color: var(--gold); }
-
 /* Footer */
 .ft { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); font-size: .72rem; color: var(--ink-light); letter-spacing: .1em; }
 .ft .o { color: var(--gold); font-size: .9rem; letter-spacing: .5em; display: block; margin-bottom: .5rem; }
