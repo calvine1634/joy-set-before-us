@@ -337,6 +337,17 @@ body {
   .pc-sc { font-size: .98rem; line-height: 1.9; }
 }
 
+
+/* Today's day row highlight */
+.day-row.today {
+  border-color: var(--gold-pale);
+  background: linear-gradient(135deg, rgba(184,148,62,.06) 0%, #fff 100%);
+  box-shadow: 0 2px 12px rgba(184,148,62,.1);
+}
+.day-row.today::before {
+  background: var(--gold);
+}
+
 </style>
 </head>
 <body>
@@ -2347,105 +2358,105 @@ body {
 <div class="page" id="home">
   <div class="ov-intro">Each day explores a fundamental question of life paired with a practice of responding well. Choose a topic to receive today's passage.</div>
 
-  <div class="day-row">
+  <div class="day-row" data-day="1">
     <div class="dr-label"><span>Monday</span></div>
-    <a href="#mon-f-0" class="tc">
+    <a href="#" class="tc" data-key="mon" data-type="f" data-count="10">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">What Is Reality? TEST</span>
       <span class="tc-q">Am I growing in God's reality?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#mon-r-0" class="tc">
+    <a href="#" class="tc" data-key="mon" data-type="r" data-count="7">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Authority We Choose</span>
       <span class="tc-q">Do I live by God's authority today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
   </div>
-  <div class="day-row">
+  <div class="day-row" data-day="2">
     <div class="dr-label"><span>Tuesday</span></div>
-    <a href="#tue-f-1" class="tc">
+    <a href="#" class="tc" data-key="tue" data-type="f" data-count="6">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">Who Are We?</span>
       <span class="tc-q">Do I live as a personal, spiritual, eternal being today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#tue-r-1" class="tc">
+    <a href="#" class="tc" data-key="tue" data-type="r" data-count="6">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Discipleship We Practice</span>
       <span class="tc-q">Do I live as a disciple of God today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
   </div>
-  <div class="day-row">
+  <div class="day-row" data-day="3">
     <div class="dr-label"><span>Wednesday</span></div>
-    <a href="#wed-f-2" class="tc">
+    <a href="#" class="tc" data-key="wed" data-type="f" data-count="6">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">What Is Our Life About?</span>
       <span class="tc-q">Am I pursuing God's character in humility today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#wed-r-2" class="tc">
+    <a href="#" class="tc" data-key="wed" data-type="r" data-count="5">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Image We Pursue</span>
       <span class="tc-q">Do I live in the name of the Trinity today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
   </div>
-  <div class="day-row">
+  <div class="day-row" data-day="4">
     <div class="dr-label"><span>Thursday</span></div>
-    <a href="#thu-f-3" class="tc">
+    <a href="#" class="tc" data-key="thu" data-type="f" data-count="6">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">How Are We To Live?</span>
       <span class="tc-q">Do I live on the rock today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#thu-r-3" class="tc">
+    <a href="#" class="tc" data-key="thu" data-type="r" data-count="5">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Education We Deepen</span>
       <span class="tc-q">Am I deepening my beliefs in God's commands today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
   </div>
-  <div class="day-row">
+  <div class="day-row" data-day="5">
     <div class="dr-label"><span>Friday</span></div>
-    <a href="#fri-f-4" class="tc">
+    <a href="#" class="tc" data-key="fri" data-type="f" data-count="6">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">How Can We Love?</span>
       <span class="tc-q">Do I take up my cross today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#fri-r-4" class="tc">
+    <a href="#" class="tc" data-key="fri" data-type="r" data-count="5">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Provision We Trust</span>
       <span class="tc-q">Do I trust God for provision today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
   </div>
-  <div class="day-row">
+  <div class="day-row" data-day="6">
     <div class="dr-label"><span>Saturday</span></div>
-    <a href="#sat-f-5" class="tc">
+    <a href="#" class="tc" data-key="sat" data-type="f" data-count="6">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">What Is Our Purpose?</span>
       <span class="tc-q">Am I reigning with God today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#sat-r-0" class="tc">
+    <a href="#" class="tc" data-key="sat" data-type="r" data-count="5">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Forgiveness We Extend</span>
       <span class="tc-q">Forgiven — do I forgive others today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
   </div>
-  <div class="day-row">
+  <div class="day-row" data-day="0">
     <div class="dr-label"><span>Sunday</span></div>
-    <a href="#sun-f-1" class="tc">
+    <a href="#" class="tc" data-key="sun" data-type="f" data-count="5">
       <span class="tc-type f">Life's Fundamental</span>
       <span class="tc-title">Joy We Cultivate</span>
       <span class="tc-q">Does my joy in God eclipse temptation today?</span>
       <span class="tc-arrow">&#8250;</span>
     </a>
-    <a href="#sun-r-1" class="tc">
+    <a href="#" class="tc" data-key="sun" data-type="r" data-count="5">
       <span class="tc-type r">Responding Well</span>
       <span class="tc-title">Deliverance We Receive</span>
       <span class="tc-q">Does abiding position me for deliverance?</span>
@@ -2455,5 +2466,49 @@ body {
 </div>
 
 <footer class="ft"><span class="o">&#10022;</span>The Joy Set Before Us</footer>
+
+<script>
+(function() {
+  // ── Today's date info ──
+  var now = new Date();
+  var jsDay = now.getDay(); // 0=Sun, 1=Mon ... 6=Sat
+
+  // Days since a fixed epoch (Jan 1 2024, a Monday).
+  // Used to pick which passage index everyone sees on any given date.
+  var epoch = new Date(2024, 0, 1);
+  var daysSinceEpoch = Math.floor((now - epoch) / 86400000);
+
+  // Week number — increments every 7 days.
+  // Everyone on the same calendar week sees the same passage.
+  var weekNumber = Math.floor(daysSinceEpoch / 7);
+
+  // ── 1. Highlight today's row on the overview ──
+  var rows = document.querySelectorAll('.day-row[data-day]');
+  for (var i = 0; i < rows.length; i++) {
+    if (parseInt(rows[i].getAttribute('data-day')) === jsDay) {
+      rows[i].classList.add('today');
+      var label = rows[i].querySelector('.dr-label');
+      if (label) {
+        var badge = document.createElement('span');
+        badge.className = 'today-badge';
+        badge.textContent = 'TODAY';
+        label.appendChild(badge);
+      }
+    }
+  }
+
+  // ── 2. Set each topic link to today's passage ──
+  // weekNumber % passageCount gives the same index for everyone
+  // on the same week. Next week it rotates to the next passage.
+  var links = document.querySelectorAll('.tc[data-key]');
+  for (var j = 0; j < links.length; j++) {
+    var key = links[j].getAttribute('data-key');
+    var type = links[j].getAttribute('data-type');
+    var count = parseInt(links[j].getAttribute('data-count'));
+    var index = weekNumber % count;
+    links[j].setAttribute('href', '#' + key + '-' + type + '-' + index);
+  }
+})();
+</script>
 </body>
 </html>
