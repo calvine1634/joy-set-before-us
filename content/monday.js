@@ -58,7 +58,7 @@ module.exports = {
         ref: 'Exodus 3',
         summary: 'Understanding reality begins with God\'s revelation, not human awareness.',
         rq: 'Do I posture my life so that I can listen to God?',
-        verses: 'Exodus 3:2,4-6',
+        verses: 'Exodus 3',
       },
 
       {
