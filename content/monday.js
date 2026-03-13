@@ -42,7 +42,7 @@ module.exports = {
         ref: 'Genesis 16 & 21',
         summary: 'Reality is found in God even when abandoned by people.',
         rq: 'Do I live knowing that God sees me?',
-        verses: 'Genesis 16:7-8,13',
+        verses: 'Genesis 16',
       },
 
       {
