@@ -24,7 +24,7 @@ module.exports = {
         ref: 'Genesis 22',
         summary: 'Love trusts God more than outcomes.',
         rq: 'Does love cost me something today?',
-        verses: 'Genesis 22:2-3,8',
+        verses: 'Genesis 22',
       },
 
       {
