@@ -15,7 +15,7 @@
 const SITE_META = {
   title: 'The <em>Joy</em> Set Before Us',
   subtitle: 'Our Responsibility to Increasingly Understand Life &amp; Respond Well',
-  introText: 'Each day explores a fundamental question of life paired with a practice of responding well. Choose a topic to receive today\'s passage.',
+  introText: 'Each day, explore a fundamental question of life and/or a fundamental aspect of responding well through an identified theme portrayed in a Bible story.',
 };
 
 const DAYS = [
