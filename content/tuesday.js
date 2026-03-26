@@ -11,7 +11,7 @@ module.exports = {
   // ──────────────────────────────────────────────
   fundamental: {
     title: 'Who Are We?',
-    question: 'Do I live as a personal, spiritual, eternal being?',
+    question: 'Am I living as a personal, spiritual, eternal being?',
     description:
       'We are designed in God\'s image and likeness—spiritual, personal, and eternal ' +
       'persons with a heart, mind, body and soul. Deeply loved and dependent on God\'s ' +
@@ -298,8 +298,8 @@ module.exports = {
   // RESPONDING WELL: Discipleship We Practice
   // ──────────────────────────────────────────────
   response: {
-    title: 'Discipleship We Practice',
-    question: 'Do I increasingly live as a disciple of God?',
+    title: 'Discipleship',
+    question: 'Am I increasingly a disciple of God?',
     description:
       'Discipleship is the lifelong practice of following Jesus—learning His ways, ' +
       'embodying His character, and offering our whole lives in responsive obedience. ' +

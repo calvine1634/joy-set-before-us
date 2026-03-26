@@ -11,7 +11,7 @@ module.exports = {
   // ──────────────────────────────────────────────
   fundamental: {
     title: 'How Can We Love?',
-    question: 'Am I taking up my cross daily?',
+    question: 'Do I take up my cross daily?',
     description:
       'The good news—the availability of the kingdom of God—is often neither heard, ' +
       'seen, understood, nor believed. It is rejected because it calls us to live under ' +
@@ -332,8 +332,8 @@ module.exports = {
   // RESPONDING WELL: Provision We Trust
   // ──────────────────────────────────────────────
   response: {
-    title: 'Provision We Trust',
-    question: 'Do I trust God for provision today?',
+    title: 'Provision',
+    question: 'Do I increasingly trust God for my provision?',
     description:
       'Abiding in God means receiving His provision with gratitude rather than demanding ' +
       'our own. It is the daily practice of releasing anxiety to trust, knowing that the ' +

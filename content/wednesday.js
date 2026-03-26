@@ -11,7 +11,7 @@ module.exports = {
   // ──────────────────────────────────────────────
   fundamental: {
     title: 'What Is Our Life About?',
-    question: 'Do I increasingly pursue God\'s character in humility?',
+    question: 'Do I believe in and desire God’s character?',
     description:
       'We are personal beings responsible for choosing, maturing, believing, and desiring ' +
       'the kind of relationships we will increasingly pursue for eternity. We make this ' +
@@ -323,8 +323,8 @@ module.exports = {
   // RESPONDING WELL: Image We Pursue
   // ──────────────────────────────────────────────
   response: {
-    title: 'Image We Pursue',
-    question: 'Do I increasingly live in the name of the Trinity?',
+    title: 'Image',
+    question: 'Am I increasingly immersing my life in the Trinity?',
     description:
       'To bear God\'s image is to reflect His character in our relationships, work, and ' +
       'worship. It is communal and relational—we immerse ourselves for the good of the ' +

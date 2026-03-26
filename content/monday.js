@@ -429,7 +429,7 @@ module.exports = {
   // RESPONDING WELL: Authority We Choose
   // ──────────────────────────────────────────────
   response: {
-    title: 'Authority We Choose',
+    title: 'Authority',
     question: 'Do I increasingly live by God\'s authority?',
     description:
       'We are all responding to the responsibility of life we have been given as we choose ' +

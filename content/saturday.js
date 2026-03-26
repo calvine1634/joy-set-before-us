@@ -317,7 +317,7 @@ module.exports = {
   // RESPONDING WELL: Forgiveness We Extend
   // ──────────────────────────────────────────────
   response: {
-    title: 'Forgiveness We Extend',
+    title: 'Forgiveness',
     question: 'Forgiven — am I increasingly forgiving others?',
     description:
       'Forgiveness is the culture of the Kingdom. Because we have been forgiven an ' +

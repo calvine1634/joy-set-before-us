@@ -10,7 +10,7 @@ module.exports = {
   // RESPONDING WELL: Joy We Cultivate
   // ──────────────────────────────────────────────
   fundamental: {
-    title: 'Joy We Cultivate',
+    title: 'Joy',
     question: 'Does my joy in God increasingly eclipse temptation?',
     description:
       'Joy is not circumstantial but cultivated through communion with God. It deepens ' +
@@ -224,8 +224,8 @@ module.exports = {
   // RESPONDING WELL: Deliverance We Receive
   // ──────────────────────────────────────────────
   response: {
-    title: 'Deliverance We Receive',
-    question: 'Am I increasingly being delivered from evil?',
+    title: 'Deliverance',
+    question: 'Am I increasingly believing in and desiring God’s deliverance?',
     description:
       'Deliverance is not earned by effort but received through trust. It flows through ' +
       'surrendered will, readiness, and the finished work of Christ. Our future restoration ' +
