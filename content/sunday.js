@@ -13,9 +13,18 @@ module.exports = {
     title: 'Joy We Cultivate',
     question: 'Does my joy in God eclipse temptation today?',
     description:
-      'Joy is not circumstantial but cultivated through communion with God. It deepens ' +
-      'when we stop striving and delight in His presence, when we remember His faithfulness ' +
-      'and rest in His love. It is the destiny of God\'s people.',
+      'Increasingly desiring reality — Joy comes not from merely resisting temptation, but from becoming the ' +
+      'kind of person who is so deeply satisfied in God that temptation loses its appeal. As we grow in ' +
+      'knowledge of God and depend on His grace, we find lasting joy, peace, and security that the world cannot ' +
+      'offer or understand, unlike the restless pursuit of power, success, and control that never satisfies. ' +
+      'Temptation gains influence when we subtly value it, but it is overcome not by willpower alone, but by ' +
+      'renewing our thinking and anchoring our desires in what is true, good, and rooted in God\'s character. ' +
+      'Pride, distraction, and self-deception can pull us off course, leading us to redefine truth around our ' +
+      'desires, while humility and focus on God keep us aligned with life\'s true value, meaning and ' +
+      'fulfillment. Trials then become opportunities—either to deepen trust in God and grow in enduring joy, ' +
+      'or to turn toward temptations and instability. Ultimately, God does not tempt but transforms, using ' +
+      'both discipline and grace to shape a life grounded in His goodness, where joy overflows and temptations ' +
+      'lose their power.',
 
     passages: [
       {
@@ -67,9 +76,18 @@ module.exports = {
     title: 'Deliverance We Receive',
     question: 'Does abiding position me for deliverance?',
     description:
-      'Deliverance is not earned by effort but received through trust. It flows through ' +
-      'surrendered will, readiness, and the finished work of Christ. Our future restoration ' +
-      'shapes how we interpret today.',
+      'The life of joy — Deliverance from evil is not a one-time event but an ongoing transformation of ' +
+      'character where we increasingly believe in and desire God and His character of love. Salvation involves ' +
+      'turning from the destructive patterns rooted in pride—such as fear, control, and selfish centeredness—' +
+      'and being reshaped into a life of humility, dependence, and alignment with God\'s authority and grace. ' +
+      'This transformation begins in the heart, where our beliefs shape our desires, and our desires reveal ' +
+      'what we truly value and worship. As our desires shift toward God, we enter a new way of living—like ' +
+      'stepping into a new "kingdom" with different values, priorities, and sources of fulfillment—no longer ' +
+      'driven by human power but by God\'s grace. Deliverance is not just escape from sin, but entry into a ' +
+      'life filled with God\'s presence, peace, and joy, where we are freed from deception and increasingly ' +
+      'live as people of light. Jesus perfectly models this life, demonstrating humility, love, peace, and ' +
+      'unwavering trust in the Father, showing that true deliverance is found in abiding in God and becoming ' +
+      'the kind of person who reflects His character.',
 
     passages: [
       {

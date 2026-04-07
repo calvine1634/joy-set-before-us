@@ -13,10 +13,11 @@ module.exports = {
     title: 'Who Are We?',
     question: 'Do I live as a personal, spiritual, eternal being today?',
     description:
-      'We are designed in God\'s image and likeness—spiritual, personal, and eternal ' +
-      'persons with a heart, mind, body and soul. Deeply loved and dependent on God\'s ' +
-      'authority and grace, we are given great responsibility and dignity to choose our ' +
-      'destiny in a world designed with morality and purpose found in God\'s character of love.',
+      'God\'s image and likeness — We are designed in God\'s image and likeness—spiritual, personal, and eternal ' +
+      'persons with a heart, mind, body and soul. Deeply loved and dependent on God\'s authority and grace, we ' +
+      'are given great responsibility and dignity to choose our destiny in a world designed with morality and ' +
+      'purpose found in God\'s character of love enabling the eternal kind of life, lived out in ever deepening ' +
+      'personal relationships.',
 
     passages: [
       {
@@ -76,9 +77,16 @@ module.exports = {
     title: 'Discipleship We Practice',
     question: 'Do I live as a disciple of God today?',
     description:
-      'Discipleship is the lifelong practice of following Jesus—learning His ways, ' +
-      'embodying His character, and offering our whole lives in responsive obedience. ' +
-      'It begins with proximity to Christ and matures through surrender, service, and faithfulness.',
+      'The pursuit of joy — We are all disciples, continually seeking and following what we believe will bring ' +
+      'us value, meaning, and fulfillment, ultimately shaping who we become. True discipleship, rooted in the ' +
+      'Great Commission and the Lord\'s Prayer, is the intentional pursuit of God as our highest good, ' +
+      'recognizing Him as the only true source of joy and the good life. This transformation increasingly ' +
+      'involves the whole person—mind, heart, body, and soul—revealing not merely what we claim, but what we ' +
+      'truly believe, as seen in how we live, prioritize, and desire. As we grow in understanding God and ' +
+      'experience His love, we increasingly trust Him above all else, and His ways become our natural response. ' +
+      'Though this path conflicts with the world\'s values, true disciples learn that God alone is sufficient; ' +
+      'by prioritizing Him in their lives, they come to genuinely hallow His name and experience the lasting ' +
+      'joy of His kingdom.',
 
     passages: [
       {

@@ -13,11 +13,12 @@ module.exports = {
     title: 'What Is Our Life About?',
     question: 'Am I pursuing God\'s character in humility today?',
     description:
-      'We are personal beings responsible for choosing, maturing, believing, and desiring ' +
-      'the kind of relationships we will increasingly pursue for eternity. The character we ' +
-      'increasingly cultivate identifies what we understand and who we are becoming: either ' +
-      'pride rooted in man\'s power or humility rooted in God\'s character of love—life in ' +
-      'the Kingdom of God.',
+      'Choosing our destiny, our character — We are personal beings responsible for choosing, maturing, ' +
+      'believing, and desiring the kind of person we will become and the kind of relationships we will pursue ' +
+      'for eternity. Our choice is found in the economy we live by—the values, meaning, and fulfillment that ' +
+      'form our character and govern how we live. The character we cultivate increasingly identifies what we ' +
+      'believe in and desire: either pride rooted in man\'s power or humility rooted in God\'s character of ' +
+      'love—the kind of life in the Kingdom of God.',
 
     passages: [
       {
@@ -77,9 +78,16 @@ module.exports = {
     title: 'Image We Pursue',
     question: 'Do I live in the name of the Trinity today?',
     description:
-      'To bear God\'s image is to reflect His character in our relationships, work, and ' +
-      'worship. It is communal and relational—we immerse ourselves for the good of the ' +
-      'world, directing attention toward Christ rather than ourselves.',
+      'The kingdom of joy — We all immerse ourselves in an identity shaped by what we believe will bring value, ' +
+      'meaning, and fulfillment, tying our "name" to the authority and vision we trust and desire. We often ' +
+      'root our identity in careers, causes, or culture, but the identity we are created for is found as we are ' +
+      'immersed "in the name of the Father, Son, and Holy Spirit"—not merely through ritual, but into God\'s ' +
+      'character, authority, and kingdom. To live "in His name" is to represent Him, aligning our values, ' +
+      'lives, and purpose with His truth and mission. As we increasingly root our identity in the Trinity rather ' +
+      'than in man\'s power, we are transformed in heart, mind, body, and soul, growing in humility, purpose, ' +
+      'and contentment. In this, we come to genuinely desire and pray, "Your kingdom come," not as a distant ' +
+      'idea, but as a present reality shaping every part of our lives, where we find true belonging, purpose, ' +
+      'and joy as representatives of God\'s kingdom.',
 
     passages: [
       {

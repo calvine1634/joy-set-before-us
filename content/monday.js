@@ -10,15 +10,16 @@ module.exports = {
   // LIFE'S FUNDAMENTAL: What Is Reality?
   // ──────────────────────────────────────────────
   fundamental: {
-    title: 'What Is Reality? TEST',
+    title: 'What Is Reality?',
     question: 'Am I growing in God\'s reality?',
     description:
-      'Reality is the Author that has defined and created the nature, design, context, ' +
-      'morality and purpose of everything that exists. We know there is an Author because ' +
-      'nothing comes from nothing and nothing in the universe is the source of itself. Our ' +
-      'knowledge of reality is only found in and through God, as He engages us through ' +
-      'creation, His Word, His law, His rule, the Trinity, the Father, the Son, the Spirit, ' +
-      'the Saints, and history.  EVEN MORE TESTING',
+      'God and His character — Reality is the Author that has defined and created the nature, design, context, ' +
+      'morality and purpose of everything that exists. We know there is an Author because, nothing comes from ' +
+      'nothing and nothing in the universe is the source of itself. Reality is beyond our understanding ' +
+      'independent of the Author, Authority and Creator of the universe. It expresses the aspirations and ' +
+      'character of God, what is good and the good life—the joy set before us. Therefore, our knowledge of ' +
+      'reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, ' +
+      'the Trinity, the Father, the Son, the Spirit, the Saints, and history.',
 
     passages: [
       {
@@ -110,10 +111,16 @@ module.exports = {
     title: 'Authority We Choose',
     question: 'Do I live by God\'s authority today?',
     description:
-      'We are all responding to the responsibility of life we have been given as we choose ' +
-      'an authority, discipleship, identity, education, and source of life to abide in. ' +
-      'Responding well is to increasingly choose God and His character of love in each of ' +
-      'these endeavors which governs our life.',
+      'The vision of joy — We all choose an authority that shapes our values, beliefs, and desires about ' +
+      'reality, morality, and purpose, ultimately determining who we are becoming and how we live. While we ' +
+      'often place authority in ourselves, others, or culture, true life and good are found only in following ' +
+      'God as the ultimate authority—the One who fully understands our nature, our lives, and eternity. Pride ' +
+      'leads us to assume control we are not equipped to handle, resulting in deception and brokenness, whereas ' +
+      'humility opens the way to God\'s wisdom, power, and grace. Through a growing relationship with God as our ' +
+      'Father and the example of Jesus, we learn to live in alignment with reality, increasingly responding with ' +
+      'God\'s character of love rather than fear or self-reliance. In doing so, we discover that all of life\'s ' +
+      'deepest questions and struggles are answered in God, and that true joy, purpose, and the "good life" are ' +
+      'found in living under His authority.',
 
     passages: [
       {

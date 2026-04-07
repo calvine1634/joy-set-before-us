@@ -13,10 +13,12 @@ module.exports = {
     title: 'How Can We Love?',
     question: 'Do I take up my cross today?',
     description:
-      'The good news—the availability of the kingdom of God—is often neither heard, ' +
-      'seen, understood, nor believed. Yet only through humility and seeking God\'s ' +
-      'character of love do we begin to mature. As the hidden treasure comes into ' +
-      'view—surpassing all else—it increasingly captures our hearts.',
+      'Living from God\'s kingdom — The good news—the availability of the kingdom of God—is often neither ' +
+      'heard, seen, understood, nor believed. It is rejected because it calls us to live under God\'s authority ' +
+      'and grace, pursuing humility, seeking our value in God and His character of love in contrast to man\'s ' +
+      'power. In this, we begin to mature, to believe, and to truly desire God\'s good news—the hidden treasure. ' +
+      'As it increasingly surpasses all else, it captures our hearts, drawing us to trust in and long for the ' +
+      'beauty God has offered us, which enables us to truly love God and our neighbors.',
 
     passages: [
       {
@@ -76,9 +78,14 @@ module.exports = {
     title: 'Provision We Trust',
     question: 'Do I trust God for provision today?',
     description:
-      'Abiding in God means receiving His provision with gratitude rather than demanding ' +
-      'our own. It is the daily practice of releasing anxiety to trust, knowing that the ' +
-      'God who clothes the lilies and feeds the sparrows has not forgotten us.',
+      'The source of joy — Provision is fundamental to life, yet it is understood very differently from man\'s ' +
+      'perspective than from God\'s. The world focuses on the temporary and physical, pursuing man\'s power and ' +
+      'control, while God addresses our deeper spiritual reality and eternal life. This is seen in Israel\'s ' +
+      'wilderness experience, where God used manna and the Sabbath to teach and help them learn where true ' +
+      'provision comes from, in dependence on Him. Yet many failed to recognize these as acts of love, instead ' +
+      'remaining deceived by a longing for man\'s power and equating provision with worldly success. Ultimately, ' +
+      'God\'s provision is about forming a character that believes in and desires Him, values His kingdom, and ' +
+      'finds true peace, joy, and fulfillment in His character of love.',
 
     passages: [
       {

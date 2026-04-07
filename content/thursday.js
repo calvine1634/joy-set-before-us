@@ -13,10 +13,11 @@ module.exports = {
     title: 'How Are We To Live?',
     question: 'Do I live on the rock today?',
     description:
-      'The good life—one that is blessed independent of circumstances—is life aligned ' +
-      'with and living in the kingdom of God. It is life that is salt and light to a ' +
-      'darkened world, reflected in a character increasingly free from anger, lust, ' +
-      'manipulation, revenge, and hate.',
+      'God\'s character of love — The good life—one that is blessed independent of circumstances—is life ' +
+      'aligned with and living in the kingdom of God. It is life that is salt and light to a darkened world, ' +
+      'reflected in a character increasingly free from anger, lust, manipulation, revenge, and hate. Such a ' +
+      'life orders its identity, treasures, provision, judgments, grace, and vision around trust in God and the ' +
+      'unchanging character of His love.',
 
     passages: [
       {
@@ -76,9 +77,16 @@ module.exports = {
     title: 'Education We Deepen',
     question: 'Am I deepening my beliefs in God\'s commands today?',
     description:
-      'Spiritual education is not accumulation of facts but the formation of a heart ' +
-      'that increasingly believes and desires God. It happens through Scripture, the ' +
-      'Spirit, community, and the rhythm of daily obedience.',
+      'The springs of joy — We all receive an education rooted in the authority, vision, and identity we choose ' +
+      'to pursue, shaping our beliefs and desires. Education is more than gaining information; it is the process ' +
+      'of becoming competent in a way of life. The teachings and commands of Jesus aim to form a heart that ' +
+      'naturally and joyfully believes in and desires His way of life. This transformation requires time, ' +
+      'experience, and intentionality, as we live yoked with God in everyday life—often through "desert" ' +
+      'experiences that enable us to discover truth and refine our character to reflect His love, humility, and ' +
+      'wisdom. In contrast, an education grounded in human authority can make God\'s commands feel burdensome ' +
+      'and lead to legalism. Ultimately, the education we embrace determines who we become—either shaped by the ' +
+      'world\'s pursuit of man\'s power or by God\'s character of love—leading us to genuinely desire and live ' +
+      'out the prayer, "Your will be done."',
 
     passages: [
       {

@@ -13,10 +13,13 @@ module.exports = {
     title: 'What Is Our Purpose?',
     question: 'Am I reigning with God today?',
     description:
-      'We are all created to rule with God in humility for good. This happens in and ' +
-      'through personal relationships as friends of God, formed in His character of love. ' +
-      'We look to the example of Jesus, resisting man\'s perspective of ruling and instead ' +
-      'champion God\'s character of love.',
+      'Reigning with God — We are all created to rule with God in humility for good. This happens in and ' +
+      'through personal relationships as friends of God, formed in His character of love. We look to the ' +
+      'example of Jesus, resisting man\'s perspective of ruling—seeking pride, control and power—and instead ' +
+      'champion God\'s character of love—in serving, caring, dignifying, loving and esteeming others. In this, ' +
+      'we increasingly learn how to steward God\'s power for good, passionately advance His kingdom. There is ' +
+      'no greater purpose we could desire, nor anything that comes close to fulfilling the deepest longings of ' +
+      'our heart—peace, joy, and true fulfillment.',
 
     passages: [
       {
@@ -76,9 +79,16 @@ module.exports = {
     title: 'Forgiveness We Extend',
     question: 'Forgiven — do I forgive others today?',
     description:
-      'Forgiveness is the culture of the Kingdom. Because we have been forgiven an ' +
-      'unpayable debt, we extend mercy freely—not as weakness, but as the deepest ' +
-      'expression of God\'s character of love flowing through our lives.',
+      'The relationships of joy — Relationships are the core of human life, but their good depends on our ' +
+      'motives—whether we seek to gain from others or to love them according to God\'s character. True ' +
+      'relationships and forgiveness are built on God\'s love. God\'s forgiveness is about restoring us to a ' +
+      'life increasingly believing in and desiring God\'s love and morality. Thus, being forgiven cannot be ' +
+      'separated from increasingly believing in and desiring God\'s morality—it does not excuse wrong but ' +
+      'upholds truth while extending grace. Absent true forgiveness, we remain trapped in self-centered ' +
+      'pursuits of power, comparison, and control that destabilize relationships and hardens the heart. As we ' +
+      'look to God\'s forgiveness and morality, we extend the same restoration to others. Trusting in His ' +
+      'provision frees us from managing our own value and outcomes, enabling us to genuinely forgive and love. ' +
+      'In this, relationships become marked by peace, joy, and love, reflecting the reality of His kingdom.',
 
     passages: [
       {
