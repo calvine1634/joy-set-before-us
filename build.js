@@ -52,7 +52,7 @@ function buildDetailPage(dayKey, dayLabel, type, topic, passageIndex, passages) 
     <div class="dh-type ${typeKey}">${typeLabel}</div>
     <h2>${esc(topic.title)}</h2>
     <div class="dh-q">${esc(topic.question)}</div>
-    <div class="dh-desc">${esc(topic.description)}</div>
+    <div class="dh-desc">${esc(topic.description).replace(/\n/g, '<br>')}</div>
   </div>
   <div class="pc">
     <div class="pc-head">
