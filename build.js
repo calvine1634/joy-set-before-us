@@ -46,7 +46,6 @@ function buildDetailPage(dayKey, dayLabel, type, topic, passageIndex, passages) 
 
   return `
 <div class="page" id="${id}">
-  <a href="#home" class="back">&#8592; Overview</a>
   <div class="dh">
     <div class="dh-day">${esc(dayLabel)}</div>
     <div class="dh-type ${typeKey}">${typeLabel}</div>
