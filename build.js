@@ -118,6 +118,12 @@ async function build() {
   const css = fs.readFileSync(path.join(__dirname, 'styles.css'), 'utf8');
 
   // 4. Runtime JavaScript
+  // Build day data map (keyed by JS day number: 0=Sunday..6=Saturday)
+  const dayDataEntries = DAYS.map((day, dayIndex) => {
+    const jsDayNum = dayIndex < 6 ? dayIndex + 1 : 0;
+    return `${jsDayNum}:{key:'${day.key}',f:${day.fundamental.passages.length},r:${day.response.passages.length}}`;
+  }).join(',');
+
   const runtimeJS = `
 <script>
 (function() {
@@ -127,6 +133,24 @@ async function build() {
   var daysSinceEpoch = Math.floor((now - epoch) / 86400000);
   var weekNumber = Math.floor(daysSinceEpoch / 7);
 
+  // Passage counts per day keyed by JS day number (0=Sunday)
+  var dayData = {${dayDataEntries}};
+
+  // Even weeks = Life's Fundamentals (f), odd weeks = Responding Well (r)
+  var typeKey = weekNumber % 2 === 0 ? 'f' : 'r';
+
+  var today = dayData[jsDay];
+  var passageCount = today[typeKey];
+  var passageIndex = weekNumber % passageCount;
+  var todayHash = today.key + '-' + typeKey + '-' + passageIndex;
+
+  // Auto-redirect to today's devotional unless already on a specific page
+  var currentHash = window.location.hash.replace('#', '');
+  if (!currentHash || currentHash === 'home') {
+    window.location.replace('#' + todayHash);
+  }
+
+  // Mark today's row in the overview
   var rows = document.querySelectorAll('.day-row[data-day]');
   for (var i = 0; i < rows.length; i++) {
     if (parseInt(rows[i].getAttribute('data-day')) === jsDay) {
@@ -141,6 +165,7 @@ async function build() {
     }
   }
 
+  // Keep overview links updated (used when navigating back to #home)
   var links = document.querySelectorAll('.tc[data-key]');
   for (var j = 0; j < links.length; j++) {
     var key = links[j].getAttribute('data-key');

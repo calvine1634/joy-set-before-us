@@ -11086,6 +11086,24 @@ body {
   var daysSinceEpoch = Math.floor((now - epoch) / 86400000);
   var weekNumber = Math.floor(daysSinceEpoch / 7);
 
+  // Passage counts per day keyed by JS day number (0=Sunday)
+  var dayData = {1:{key:'mon',f:50,r:44},2:{key:'tue',f:34,r:47},3:{key:'wed',f:37,r:34},4:{key:'thu',f:35,r:28},5:{key:'fri',f:38,r:34},6:{key:'sat',f:36,r:19},0:{key:'sun',f:25,r:23}};
+
+  // Even weeks = Life's Fundamentals (f), odd weeks = Responding Well (r)
+  var typeKey = weekNumber % 2 === 0 ? 'f' : 'r';
+
+  var today = dayData[jsDay];
+  var passageCount = today[typeKey];
+  var passageIndex = weekNumber % passageCount;
+  var todayHash = today.key + '-' + typeKey + '-' + passageIndex;
+
+  // Auto-redirect to today's devotional unless already on a specific page
+  var currentHash = window.location.hash.replace('#', '');
+  if (!currentHash || currentHash === 'home') {
+    window.location.replace('#' + todayHash);
+  }
+
+  // Mark today's row in the overview
   var rows = document.querySelectorAll('.day-row[data-day]');
   for (var i = 0; i < rows.length; i++) {
     if (parseInt(rows[i].getAttribute('data-day')) === jsDay) {
@@ -11100,6 +11118,7 @@ body {
     }
   }
 
+  // Keep overview links updated (used when navigating back to #home)
   var links = document.querySelectorAll('.tc[data-key]');
   for (var j = 0; j < links.length; j++) {
     var key = links[j].getAttribute('data-key');
