@@ -13,413 +13,316 @@ module.exports = {
     title: 'What Is Reality?',
     question: 'Am I growing in God\'s reality?',
     description:
-      'God and His character - Reality is the Author that has defined and created the nature, design, context, ' +
-      'morality and purpose of everything that exists. We know there is an Author because, nothing comes from ' +
-      'nothing and nothing in the universe is the source of itself. Reality is beyond our understanding ' +
-      'independent of the Author, Authority and Creator of the universe. It expresses the aspirations and ' +
-      'character of God, what is good and the good life—the joy set before us. Therefore, our knowledge of ' +
-      'reality is only found in and through God, as He engages us through creation, His Word, His law, His rule, ' +
-      'the Trinity, the Father, the Son, the Spirit, the Saints, and history.',
+      'God and His character - Our reality comes from the Author who created and defined the nature, design, ' +
+      'context, morality, and purpose of everything that exists. We know there is an Author because nothing ' +
+      'comes from nothing, and nothing in the universe is the source of itself. Moreover, our reality extends ' +
+      'beyond the limits of human understanding; only the Author, Authority, and Creator of the universe ' +
+      'understands it fully. Our reality expresses the character and aspirations of God--what is truly good ' +
+      'and what constitutes the good life, the joy set before us. To discover our reality, the good life, ' +
+      'such knowledge must be found in and through God, who reveals Himself through creation, His Word, His ' +
+      'law, His rule, the Trinity, the Father, the Son, the Spirit, the Saints, and history.',
 
     passages: [
       {
         title: 'Creation',
         ref: 'Genesis 1',
-        summary: 'Reality is designed by God, not negotiated by humans or an endless production.',
-        rq: 'Do I live like reality depends on man?',
+        summary: 'Reality is designed by God.',
+        rq: 'Do I live by man\'s view of reality or God\'s?',
         verses: 'Genesis 1',
       },
-
       {
         title: 'Tower of Babel',
-        ref: 'Genesis 11',
-        summary: 'Man attempts to define reality and value.',
-        rq: 'Do I live believing in God\'s reality or man\'s?',
-        verses: 'Genesis 11',
+        ref: 'Genesis 11:1-9',
+        summary: 'Man attempts to control and define reality and value.',
+        rq: 'Do I live believing by God\'s reality or man\'s?',
+        verses: 'Genesis 11:1-9',
       },
-
       {
         title: 'Abram in Egypt',
         ref: 'Genesis 12:10–20',
-        summary: 'Abram acts from perceived reality (fear) instead of actual reality (God\'s promise).',
-        rq: 'Does fear distort what I believed is true?',
+        summary: 'Fear causes us to lose sight of the bigger picture.',
+        rq: 'Do I live from fear or trusting in God?',
         verses: 'Genesis 12:10-20',
       },
-
-      {
-        title: 'Jacob\'s Dream',
-        ref: 'Genesis 28',
-        summary: 'The spiritual world is reality and active.',
-        rq: 'Do I live from a spiritual reality?',
-        verses: 'Genesis 28',
-      },
-
       {
         title: 'Joseph Sold Into Slavery',
         ref: 'Genesis 37',
-        summary: 'Reality often appears tragic before it becomes redemptive.',
-        rq: 'Do I interpret hardship through trust in God — or despair?',
+        summary: 'God is bigger than our circumstances.',
+        rq: 'Do I interpret hardship through trust in God -- or despair?',
         verses: 'Genesis 37',
       },
-
       {
-        title: 'Joseph Enlightens Pharaoh',
+        title: 'Joseph Exalted by God',
         ref: 'Genesis 41',
-        summary: 'God is the source of reality.',
-        rq: 'Do I pursue God\'s understanding of reality?',
+        summary: 'God is the source of truth, reality and good.',
+        rq: 'Do I pursue God for understanding and good?',
         verses: 'Genesis 41',
       },
-
       {
         title: 'Israel\'s Oppression',
         ref: 'Exodus 1',
-        summary: 'Earthly powers can appear ultimate, but God alone defines reality.',
-        rq: 'Do I interpret life through fear — or through God\'s wisdom?',
+        summary: 'Man can appear in control, but God alone defines reality.',
+        rq: 'Do I interpret life through man -- or through God?',
         verses: 'Exodus 1',
       },
-
       {
         title: 'The Burning Bush',
         ref: 'Exodus 3',
-        summary: 'Understanding reality begins with God\'s revelation, not human awareness.',
-        rq: 'Do I posture my life so that I can listen to God?',
+        summary: 'Understanding reality begins with God\'s revelation.',
+        rq: 'Do I posture my life so that I can recognize and listen to God?',
         verses: 'Exodus 3',
       },
-
       {
         title: 'The Plagues',
         ref: 'Exodus 11',
-        summary: 'God dismantles false realities until His authority is unmistakable.',
+        summary: 'Pride keeps us from seeing false realities.',
         rq: 'Am I open to God challenging what I mistakenly trust?',
         verses: 'Exodus 11',
       },
-
       {
         title: 'Passover',
         ref: 'Exodus 12',
         summary: 'Deliverance comes from God.',
-        rq: 'Do I pursue God to be rescued from myself?',
+        rq: 'Do I pursue God to rescue me from myself?',
         verses: 'Exodus 12',
       },
-
       {
         title: 'Crossing the Red Sea',
         ref: 'Exodus 14',
-        summary: 'What appears impossible, undesirable often becomes the stage for God\'s reality.',
-        rq: 'Do I trust God when the path seemed undesirable or closed?',
+        summary: 'What appears impossible, can be the stage for seeing reality.',
+        rq: 'Do I trust God when the path seems impossible?',
         verses: 'Exodus 14',
       },
-
       {
         title: 'Manna from Heaven',
         ref: 'Exodus 16',
-        summary: 'Reality is daily dependence, not accumulated security.',
-        rq: 'Am I growing increasingly dependent on God?',
+        summary: 'Daily dependence on God opens our eyes to reality.',
+        rq: 'Do I increasingly desire to be dependent on God?',
         verses: 'Exodus 16',
       },
-
       {
         title: 'Water from the Rock',
-        ref: 'Exodus 17',
+        ref: 'Exodus 17:1-7',
         summary: 'God sustains life from sources we would never expect.',
-        rq: 'Am I growing dependent on God for my true provision?',
-        verses: 'Exodus 17',
+        rq: 'Do I increasingly recognize and desire God\'s provision?',
+        verses: 'Exodus 17:1-7',
       },
-
       {
-        title: 'Remembering God',
+        title: 'Recognizing God',
         ref: 'Deuteronomy 8',
-        summary: 'Reality is sustained by dependence on God.',
-        rq: 'Do I remember the true source of my strength?',
+        summary: 'God is the source of reality and good.',
+        rq: 'Do I increasingly recognize what is good?',
         verses: 'Deuteronomy 8',
       },
-
       {
         title: 'Elijah on Mount Carmel',
         ref: '1 Kings 18',
-        summary: 'Reality is not decided by majority but by truth.',
-        rq: 'Do I stand with God even if alone?',
+        summary: 'Reality is found in God.',
+        rq: 'Do I look to God even when I am alone?',
         verses: '1 Kings 18',
       },
-
       {
         title: 'Isaiah\'s Vision of the Throne',
         ref: 'Isaiah 6',
-        summary: 'Ultimate reality is God enthroned.',
-        rq: 'Does God\'s greatness recalibrate my perspective?',
+        summary: 'Reality, God, is far grander than we know.',
+        rq: 'Does God\'s greatness shape how I live?',
         verses: 'Isaiah 6',
       },
-
       {
         title: 'The Virgin Birth',
         ref: 'Matthew 1:18–25',
-        summary: 'Reality is defined by God, not man\'s understanding.',
-        rq: 'Do I allow God to redefine my beliefs of reality, my living?',
+        summary: 'Reality is defined by God.',
+        rq: 'Do I look to God to define reality?',
         verses: 'Matthew 1:18-25',
       },
-
       {
         title: 'The Magi Seek the King',
         ref: 'Matthew 2:1–12',
-        summary: 'Some recognize reality while others ignore it. Truth invites pursuit.',
+        summary: 'Some pursue reality while others ignore it.',
         rq: 'Do I seek God and the reality found in Him?',
         verses: 'Matthew 2:1-12',
       },
-
-      {
-        title: 'Herod\'s Deception',
-        ref: 'Matthew 2:13–18',
-        summary: 'False realities destroy the opportunity we have been given.',
-        rq: 'Do I discern man\'s distorted truth and fear?',
-        verses: 'Matthew 2:13-18',
-      },
-
       {
         title: 'The Gospel',
         ref: 'Matthew 5:1–12',
-        summary: 'Reality is found in the availability of the Kingdom of God.',
-        rq: 'Do I pursue and live in and from the kingdom of God?',
+        summary: 'Blessing is found in the Kingdom of God.',
+        rq: 'Do I pursue and live in the kingdom of God?',
         verses: 'Matthew 5:1-12',
       },
-
       {
         title: 'I Will Give You Rest',
         ref: 'Matthew 11:25–30',
-        summary: 'True reality is received as we believe it, not man\'s power.',
-        rq: 'Do I exchange striving for life yoked to God?',
+        summary: 'Reality and rest is found in God, not man\'s power.',
+        rq: 'Do I pursue a life of rest, yoked to God?',
         verses: 'Matthew 11:25-30',
       },
-
       {
         title: 'Mustard Seed & Yeast',
         ref: 'Matthew 13:31–35',
-        summary: 'God\'s reality although mostly invisibly transforms everything visibly.',
+        summary: 'What appears insignificant to most turns out to be very significant.',
         rq: 'Do I trust God\'s transforming wisdom and power?',
         verses: 'Matthew 13:31-35',
       },
-
-      {
-        title: 'Peter Declares Jesus the Messiah',
-        ref: 'Matthew 16:13–20',
-        summary: 'Reality is revealed by God.',
-        rq: 'Does my living reflect believing and desiring God?',
-        verses: 'Matthew 16:13-20',
-      },
-
       {
         title: 'The Authority of Jesus Astonishes',
         ref: 'Mark 1:21–28',
-        summary: 'Reality is revealed when truth carries undeniable authority.',
-        rq: 'Do I recognize God\'s authority when confronted by it?',
+        summary: 'Authority is seen in revealed reality.',
+        rq: 'Do I recognize God\'s authority?',
         verses: 'Mark 1:21-28',
       },
-
-      {
-        title: 'Jesus Seeks Reality in Solitude',
-        ref: 'Mark 1:35–39',
-        summary: 'Reality is clarified in communion with the Father.',
-        rq: 'Do I seek God before being swept into urgency?',
-        verses: 'Mark 1:35-39',
-      },
-
       {
         title: 'Jesus Heals the Paralytic',
         ref: 'Mark 2:1–12',
-        summary: 'Reality is seen in restoring what is broken.',
-        rq: 'Do I bring my broken places into God\'s restoring reality?',
+        summary: 'Authority is seen in the restoring what is broken.',
+        rq: 'Do I place my broken life into God\'s restoring hands?',
         verses: 'Mark 2:1-12',
       },
-
       {
         title: 'The Gerasene Demoniac Restored',
         ref: 'Mark 5:1–20',
-        summary: 'No distortion is beyond God\'s authority to redeem.',
+        summary: 'God has the authority to redeem.',
         rq: 'Do I believe God can restore what seems impossible?',
         verses: 'Mark 5:1-20',
       },
-
       {
         title: 'Jesus Walks on Water',
         ref: 'Mark 6:45–52',
-        summary: 'Reality exceeds man\'s understanding which we must learn from God.',
-        rq: 'Do I allow God to define what I thought was possible?',
+        summary: 'Reality exceeds man\'s understanding.',
+        rq: 'Do I look to God to define the reality I live by?',
         verses: 'Mark 6:45-52',
       },
-
       {
         title: 'The Transfiguration',
         ref: 'Mark 9:2–8',
-        summary: 'Our eternal glory is hidden yet reality.',
-        rq: 'Does our eternal glory shape how I live?',
+        summary: 'The eternal glory of the redeemed is hidden.',
+        rq: 'Does my potential for eternal glory shape how I live?',
         verses: 'Mark 9:2-8',
       },
-
-      {
-        title: 'Blind Bartimaeus Receives Sight',
-        ref: 'Mark 10:46–52',
-        summary: 'Reality becomes visible to those who persistently seek mercy.',
-        rq: 'Do I pursue God to believe and desire reality?',
-        verses: 'Mark 10:46-52',
-      },
-
       {
         title: 'The Resurrection',
         ref: 'Mark 16:1–8',
-        summary: 'Death is not ultimate reality — God is.',
-        rq: 'Do I live with an eternal perspective?',
+        summary: 'Death is not ultimate reality -- God is.',
+        rq: 'Do I live from an eternal perspective?',
         verses: 'Mark 16:1-8',
       },
-
       {
-        title: 'Gabriel Announces John\'s Birth',
-        ref: 'Luke 1:5–25',
-        summary: 'Reality begins with God, not limited by man\'s power.',
-        rq: 'Do I trust God beyond what seems possible?',
-        verses: 'Luke 1:5-25',
-      },
-
-      {
-        title: 'Mary Receives the Impossible',
-        ref: 'Luke 1:26–38',
+        title: 'Gabriel Announces Jesus\' Birth',
+        ref: 'Luke 1:26–56',
         summary: 'Reality is increasingly seen as we increasingly believe God.',
         rq: 'Am I increasingly believing in God\'s view of reality?',
-        verses: 'Luke 1:26-38',
+        verses: 'Luke 1:26-56',
       },
-
       {
         title: 'The Birth of Jesus',
         ref: 'Luke 2:1–20',
-        summary: 'Ultimate reality enters humbly, not exemplifying pride.',
+        summary: 'Our example, Jesus, entering humbly under God.',
         rq: 'Do I see the greatness of humility?',
         verses: 'Luke 2:1-20',
       },
-
       {
         title: 'Jesus in the Temple at Twelve',
         ref: 'Luke 2:41–52',
-        summary: 'Reality centers on the Father\'s purposes.',
-        rq: 'Does God\'s purposes organize my life?',
+        summary: 'Jesus pursues reality.',
+        rq: 'Does God\'s reality and purposes organize my life?',
         verses: 'Luke 2:41-52',
       },
-
       {
         title: 'The Great Catch of Fish',
         ref: 'Luke 5:1–11',
-        summary: 'Reality becomes visible with increasing humility.',
-        rq: 'Do I grasp humility comes before understanding?',
+        summary: 'In humility, reality becomes increasingly visible.',
+        rq: 'Do I grasp the fundamental value of humility?',
         verses: 'Luke 5:1-11',
       },
-
       {
         title: 'Calming the Storm',
         ref: 'Luke 8:22–25',
-        summary: 'Reality is not the storm but Christ.',
+        summary: 'Reality is not the storm but God.',
         rq: 'Does fear or faith interpret my circumstances?',
         verses: 'Luke 8:22-25',
       },
-
       {
         title: 'The Word Became Flesh',
         ref: 'John 1:1–14',
-        summary: 'Reality is not abstract, it is personal and recognized by those willing to see.',
-        rq: 'Was I open to interpret reality through Jesus?',
+        summary: 'Reality is not abstract, it is personal and recognizable.',
+        rq: 'Am I open to seeing reality through Jesus?',
         verses: 'John 1:1-14',
       },
-
       {
         title: 'The Lamb of God',
         ref: 'John 1:29–34',
-        summary: 'Finding reality centers on redemption, not self-sufficiency.',
+        summary: 'Redemption centers on humility, believing and desiring God.',
         rq: 'Do I live aware of my need for God\'s grace?',
         verses: 'John 1:29-34',
       },
-
       {
         title: 'You Must Be Born Again',
         ref: 'John 3:1–21',
-        summary: 'Reality is entered through spiritual rebirth.',
-        rq: 'Do I live from spiritual life rather than mere physical existence?',
+        summary: 'Reality is found through God\'s grace.',
+        rq: 'Do I live being led by the Spirit?',
         verses: 'John 3:1-21',
       },
-
       {
         title: 'Living Water',
         ref: 'John 4:1–26',
-        summary: 'Reality satisfies the deepest thirst of the soul.',
-        rq: 'Do I seek fulfillment in God rather than substitutes?',
+        summary: 'God satisfies the deepest thirst of the soul.',
+        rq: 'Do I seek fulfillment in God?',
         verses: 'John 4:1-26',
       },
-
       {
         title: 'Bread of Life',
         ref: 'John 6:25–40',
-        summary: 'Reality is sustained by Christ, not temporary provision.',
-        rq: 'Do I hunger for true provision for life?',
+        summary: 'Reality is sustained by God.',
+        rq: 'Do I hunger for God?',
         verses: 'John 6:25-40',
       },
-
       {
         title: 'Raising Lazarus',
-        ref: 'John 11',
-        summary: 'Reality is not defined by death but by God.',
+        ref: 'John 11:1-46',
+        summary: 'Reality is not defined by physical death but by God.',
         rq: 'Does God define my values and beliefs?',
-        verses: 'John 11',
+        verses: 'John 11:1-46',
       },
-
-      {
-        title: 'The Ascension and the Spirit',
-        ref: 'Acts 1',
-        summary: 'Reality exemplified by the Christ and the Spirit.',
-        rq: 'Do I live in light of the Christ and the Spirit?',
-        verses: 'Acts 1',
-      },
-
       {
         title: 'Ananias and Sapphira',
-        ref: 'Acts 5',
-        summary: 'Reality is not manipulated by appearances; God sees truth.',
-        rq: 'Do I live transparently before God?',
-        verses: 'Acts 5',
+        ref: 'Acts 5:1-11',
+        summary: 'Reality is not manipulated by appearances or performances.',
+        rq: 'Do I live transparently believing and desiring God?',
+        verses: 'Acts 5:1-11',
       },
-
       {
         title: 'Saul\'s Conversion',
-        ref: 'Acts 9',
-        summary: 'Reality can overturn deeply held convictions in a moment.',
-        rq: 'Was I open to being redirected to reality by God?',
-        verses: 'Acts 9',
+        ref: 'Acts 9:1-19',
+        summary: 'Reality can overturn deeply held convictions.',
+        rq: 'Am I open to God defining the reality that governs my life?',
+        verses: 'Acts 9:1-19',
       },
-
       {
         title: 'Paul in Athens',
-        ref: 'Acts 17',
-        summary: 'Reality confronts cultural philosophies with living truth.',
+        ref: 'Acts 17:16-34',
+        summary: 'Reality confronts cultural philosophies.',
         rq: 'Do I interpret reality through God\'s revelation or culture?',
-        verses: 'Acts 17',
+        verses: 'Acts 17:16-34',
       },
-
       {
         title: 'Man\'s Digression from Reality',
-        ref: 'Romans 1:18–32',
-        summary: 'Pride does not want to be governed by reality.',
+        ref: 'Romans 1:18-32',
+        summary: 'Pride does not want to be governed by Reality.',
         rq: 'Do I live humbly before God?',
         verses: 'Romans 1:18-32',
       },
-
       {
         title: 'Seeing Reality',
-        ref: 'Romans 8',
-        summary: 'Reality can only be seen through the Spirit.',
-        rq: 'Do I look to the Spirit to understand reality?',
-        verses: 'Romans 8',
+        ref: 'Romans 8:1-17',
+        summary: 'Reality seen living according to the Spirit.',
+        rq: 'Is my life being led by the Spirit?',
+        verses: 'Romans 8:1-17',
       },
-
       {
         title: 'The Supremacy of Christ',
-        ref: 'Colossians 1',
-        summary: 'Reality holds together in Christ.',
-        rq: 'Is Christ central in how I approach life?',
-        verses: 'Colossians 1',
+        ref: 'Colossians 1:13-29',
+        summary: 'God holds Reality in His hand.',
+        rq: 'Is God central to the reality I live by?',
+        verses: 'Colossians 1:13-29',
       },
     ],
   },
@@ -433,368 +336,284 @@ module.exports = {
     description:
       'the Great Commission:   All authority has been given to me\n' +
       'the Lord\'s Prayer:        Our Father in heaven\n\n' +
-      'The vision of joy - We all choose an authority that shapes our values, beliefs, and desires about ' +
-      'reality, morality, and purpose, ultimately determining who we are becoming and how we live. While we ' +
-      'often place authority in ourselves, others, or culture, true life and good are found only in following ' +
-      'God as the ultimate authority—the One who fully understands our nature, our lives, and eternity. Pride ' +
-      'leads us to assume control we are not equipped to handle, resulting in deception and brokenness, whereas ' +
-      'humility opens the way to God\'s wisdom, power, and grace. Through a growing relationship with God as our ' +
-      'Father and the example of Jesus, we learn to live in alignment with reality, increasingly responding with ' +
-      'God\'s character of love rather than fear or self-reliance. In doing so, we discover that all of life\'s ' +
-      'deepest questions and struggles are answered in God, and that true joy, purpose, and the "good life" are ' +
-      'found in living under His authority.',
+      'All our issues in life are answered by God\n\n' +
+      'Everyone chooses an authority shaping their values, beliefs and desires of reality, morality, and ' +
+      'purpose determining who they are becoming and how they live. While people often place authority in ' +
+      'themselves, others, or culture, true life and good come only from following God as the ultimate ' +
+      'authority--the One who fully understands our nature, life and eternity. Pride leads us to wrongly ' +
+      'assume control we are not equipped for, resulting in deception and brokenness, whereas humility opens ' +
+      'the way to God\'s wisdom, stability, and truth. Through a growing relationship with God as our Father ' +
+      'and the example of Jesus we learn to live in alignment with reality, increasingly responding with ' +
+      'God\'s character of love rather than fear or self-reliance. In doing so, we discover that all of ' +
+      'life\'s deepest questions and struggles are answered in God, and that true joy, purpose, and the ' +
+      '"good life" are found in living under His authority.',
 
     passages: [
       {
         title: 'The Fall',
         ref: 'Genesis 3',
-        summary: 'Rejecting God, for the illusion of man\'s autonomy.',
-        rq: 'Who does my life identify as my authority?',
+        summary: 'We reject God, pursuing the illusion of man\'s autonomy.',
+        rq: 'Who does my life and values identify is my authority?',
         verses: 'Genesis 3',
       },
-
       {
-        title: 'Cain',
-        ref: 'Genesis 4',
-        summary: 'God warns us: "sin is crouching at your door…"',
+        title: 'Cain and Abel',
+        ref: 'Genesis 4:1-15',
+        summary: 'God warns us: "sin is crouching at your door..."',
         rq: 'Do I heed God\'s warning?',
-        verses: 'Genesis 4',
+        verses: 'Genesis 4:1-15',
       },
-
       {
         title: 'Noah',
         ref: 'Genesis 6',
-        summary: 'Belief in God looks insane without cultural support.',
-        rq: 'Do I believe God even when I don\'t understand or desire it?',
+        summary: 'God sees what we don\'t see.',
+        rq: 'Do I believe in God when I can\'t see the good?',
         verses: 'Genesis 6',
       },
-
       {
         title: 'Call of Abram',
         ref: 'Genesis 12',
-        summary: 'Responding to God\'s call is an act of belief.',
-        rq: 'Do I respond to God\'s promptings?',
+        summary: 'God\'s call is much bigger than we can see.',
+        rq: 'Do I hear and respond to God\'s promptings?',
         verses: 'Genesis 12',
       },
-
       {
         title: 'Abraham Offering Isaac',
         ref: 'Genesis 22',
-        summary: 'Great trust in God identifies great character.',
+        summary: 'Authority and character is identified trusting in God.',
         rq: 'Is my trust in God increasingly growing?',
         verses: 'Genesis 22',
       },
-
       {
         title: 'Sodom and Gomorrah',
-        ref: 'Genesis 18–19',
+        ref: 'Genesis 19:1-29',
         summary: 'Society increasingly normalizes rebellion.',
-        rq: 'Does culture shape my convictions today?',
-        verses: 'Genesis 18-19',
+        rq: 'Does the culture shape my convictions?',
+        verses: 'Genesis 19:1-29',
       },
-
       {
         title: 'Joseph and Potiphar\'s Wife',
         ref: 'Genesis 39',
-        summary: 'Belief in God chooses God\'s morals even when it\'s tough.',
-        rq: 'Do I know God\'s morals and are they guiding my decisions?',
+        summary: 'Our beliefs are identified in our morality.',
+        rq: 'Does the morality God has given us guide my life?',
         verses: 'Genesis 39',
       },
-
       {
         title: 'Moses\' Reluctance',
         ref: 'Exodus 4',
-        summary: 'Authority is believed when we are willing.',
+        summary: 'We desire to do what we believe in.',
         rq: 'Do I believe in God when He calls?',
         verses: 'Exodus 4',
       },
-
       {
         title: 'Pharaoh Hardens His Heart',
         ref: 'Exodus 11',
-        summary: 'Resisting God does not preserve freedom — it deepens bondage.',
-        rq: 'Was my heart open and responsive to God?',
+        summary: 'Resisting God does not preserve freedom -- it deepens bondage.',
+        rq: 'Is my heart open and responsive to God?',
         verses: 'Exodus 11',
       },
-
       {
         title: 'The Ten Commandments',
         ref: 'Exodus 20',
-        summary: 'Authority is not restriction but the architecture of freedom.',
+        summary: 'God is not about restrictions but the architecture of freedom.',
         rq: 'Do I view God\'s commands as life-giving?',
         verses: 'Exodus 20',
       },
-
       {
         title: 'The Golden Calf',
         ref: 'Exodus 32',
-        summary: 'When we are distant from God, we manufacture substitutes.',
-        rq: 'Do I pursue God — or settle for substitutes?',
+        summary: 'When we are distant from God, we manufacture substitutes for God.',
+        rq: 'Do my values point to God or substitutes?',
         verses: 'Exodus 32',
       },
-
       {
         title: 'The Law',
         ref: 'Deuteronomy 5',
-        summary: 'Authority orders life so that it flourishes.',
-        rq: 'Do I believe in and desire God\'s authority as reflected by my life?',
+        summary: 'God orders life so that it flourishes.',
+        rq: 'Does my life reflect believing in and desiring God\'s authority?',
         verses: 'Deuteronomy 5',
       },
-
       {
         title: 'Joshua\'s Farewell',
         ref: 'Joshua 23',
-        summary: 'Authority invites a conscious choosing.',
-        rq: 'Do I intentionally believe and serve as reflected by my life?',
+        summary: 'Personal life requires a conscious choosing.',
+        rq: 'What does my life\'s values indicate I am choosing?',
         verses: 'Joshua 23',
       },
-
       {
         title: 'Saul Rejected',
-        ref: '1 Samuel 13:1–14',
-        summary: 'Our beliefs direct our destiny.',
+        ref: '1 Samuel 13:1-14',
+        summary: 'Our values and beliefs direct our destiny.',
         rq: 'Is my life a reflection of believing and desiring God?',
         verses: '1 Samuel 13:1-14',
       },
-
-      {
-        title: 'God\'s Covenant With David',
-        ref: '2 Samuel 7',
-        summary: 'Authority rests on God.',
-        rq: 'Do I trust God\'s word for my value and future?',
-        verses: '2 Samuel 7',
-      },
-
       {
         title: 'Josiah Rediscovers the Law',
         ref: '2 Kings 22–23',
-        summary: 'Authority corrects man\'s opinions.',
-        rq: 'Does Scripture govern my beliefs and desires?',
+        summary: 'God identifies reality.',
+        rq: 'Does the Bible govern my beliefs and desires?',
         verses: '2 Kings 22-23',
       },
-
       {
         title: 'Daniel under God',
         ref: 'Daniel 1',
         summary: 'God\'s authority defines reality, not kings.',
-        rq: 'Do I remain faithful facing pressure?',
+        rq: 'Do I remain faithful to God, even when facing pressure?',
         verses: 'Daniel 1',
       },
-
       {
         title: 'Personal Relationships',
-        ref: 'Matthew 5:21–48',
-        summary: 'Jesus identifies the characteristics of good personal relationships.',
-        rq: 'Does my life reflect character yielding good personal relationships?',
+        ref: 'Matthew 5:21-48',
+        summary: 'Jesus identifies character yielding good personal relationships.',
+        rq: 'Does my life increasingly reflect such character?',
         verses: 'Matthew 5:21-48',
       },
-
       {
         title: 'Kingdom Living',
-        ref: 'Matthew 6:1–34',
-        summary: 'Authority reorders daily life — what we seek reveals what we value.',
-        rq: 'Do God\'s values organize my priorities?',
+        ref: 'Matthew 6:1-34',
+        summary: 'What we increasingly seek reveals what we value.',
+        rq: 'Does God\'s values organize my life and my priorities?',
         verses: 'Matthew 6:1-34',
       },
-
       {
         title: 'Kingdom Living',
-        ref: 'Matthew 7:1–29',
-        summary: 'Authority defines our true values.',
-        rq: 'Do God\'s wisdom organize my priorities?',
+        ref: 'Matthew 7:1-29',
+        summary: 'God defines life\'s true values.',
+        rq: 'Does God\'s values organize my life and my priorities?',
         verses: 'Matthew 7:1-29',
       },
-
       {
         title: 'Forgiving the Paralytic',
-        ref: 'Matthew 9:1–8',
+        ref: 'Matthew 9:1-8',
         summary: 'Jesus has authority over life and sin.',
         rq: 'Do I value God\'s authority over man\'s power?',
         verses: 'Matthew 9:1-8',
       },
-
       {
         title: 'Jesus Sends Out the Twelve',
         ref: 'Matthew 10',
-        summary: 'Authority is demonstrated and experienced in God\'s kingdom.',
-        rq: 'Do I live believing in and desiring God\'s kingdom?',
+        summary: 'God\'s Authority is experienced living in God\'s kingdom.',
+        rq: 'Do I live in and desire God\'s kingdom?',
         verses: 'Matthew 10',
       },
-
       {
         title: 'Workers in the Vineyard',
-        ref: 'Matthew 20:1–16',
-        summary: 'God\'s authority defines justice beyond human comparison.',
-        rq: 'Do I trust God\'s wisdom when it challenged my expectations?',
+        ref: 'Matthew 20:1-16',
+        summary: 'God\'s authority is not about human comparison but love.',
+        rq: 'Do I trust God\'s wisdom when it challenges my expectations?',
         verses: 'Matthew 20:1-16',
       },
-
       {
-        title: 'Parable of the Tenants',
-        ref: 'Matthew 21:33–46',
-        summary: 'Rejecting God\'s authority is rejecting reality.',
-        rq: 'Does my life honor God\'s authority and reality?',
+        title: 'Parable of the Landlord',
+        ref: 'Matthew 21:33-46',
+        summary: 'Rejecting God\'s authority is rejecting the life He offers.',
+        rq: 'Does my life honor and live by God\'s authority?',
         verses: 'Matthew 21:33-46',
       },
-
       {
-        title: 'Woes to the Pharisees',
+        title: 'Woe to the Pharisees',
         ref: 'Matthew 23',
-        summary: 'Performance deceives about what we truly believe and desire.',
-        rq: 'Was my life authentic or merely performance?',
+        summary: 'Performances can deceive what we truly believe and desire.',
+        rq: 'What does my life reflect are my values, what I believe and desire?',
         verses: 'Matthew 23',
       },
-
       {
         title: 'Sheep and Goats Judgment',
-        ref: 'Matthew 25:31–46',
+        ref: 'Matthew 25:31-46',
         summary: 'Our life reveals who we choose to be our authority.',
-        rq: 'Does my life reflect the priorities of the King?',
+        rq: 'Does my life reflect the values of Jesus?',
         verses: 'Matthew 25:31-46',
       },
-
       {
         title: 'A House Divided Cannot Stand',
-        ref: 'Mark 3:20–30',
-        summary: 'Rejecting God\'s authority fractures the reality of life.',
-        rq: 'Do my choices align under God\'s rule?',
+        ref: 'Mark 3:20-30',
+        summary: 'Rejecting God\'s authority diverts life away from reality.',
+        rq: 'Do my values align with God\'s?',
         verses: 'Mark 3:20-30',
       },
-
       {
-        title: 'The Withered Hand Restored',
-        ref: 'Mark 3:1–6',
-        summary: 'Authority prioritizes love over legalism.',
-        rq: 'Does God\'s character of love increasingly guide my life?',
+        title: 'Withered Hand Restored',
+        ref: 'Mark 3:1-6',
+        summary: 'God prioritizes love over legalism.',
+        rq: 'Does God\'s character of love increasingly govern my life?',
         verses: 'Mark 3:1-6',
       },
-
-      {
-        title: 'The Sending of the Twelve',
-        ref: 'Mark 6:7–13',
-        summary: 'Learning from the Authority comes from obedience.',
-        rq: 'Do I trust God enough to follow His instructions?',
-        verses: 'Mark 6:7-13',
-      },
-
       {
         title: 'Take Up Your Cross',
-        ref: 'Mark 8:31–38',
-        summary: 'Authority identifies the two opposing paths in life.',
-        rq: 'Does my life reflect finding my value in God vs man\'s power?',
+        ref: 'Mark 8:31-38',
+        summary: 'God identifies the two opposing paths in life.',
+        rq: 'Do my values reflect following God or man\'s power?',
         verses: 'Mark 8:31-38',
       },
-
       {
         title: 'The Rich Young Ruler',
-        ref: 'Mark 10:17–31',
-        summary: 'Authority exposes what we believe and desire most.',
-        rq: 'Do I believe and desire deception in my life?',
+        ref: 'Mark 10:17-31',
+        summary: 'Our values expose what we believe and desire.',
+        rq: 'Do my values reflect God is my priority?',
         verses: 'Mark 10:17-31',
       },
-
       {
-        title: 'The Greatest Commandment',
-        ref: 'Mark 12:28–34',
-        summary: 'Authority orders life in God\'s character of love.',
-        rq: 'Does God\'s character of love organize my priorities?',
+        title: 'The Great Commandment',
+        ref: 'Mark 12:28-34',
+        summary: 'God orders life in God\'s character of love.',
+        rq: 'Does God\'s character of love reflect my priorities?',
         verses: 'Mark 12:28-34',
       },
-
       {
         title: 'Jesus\' Temptation',
-        ref: 'Luke 4:1–13',
-        summary: 'God and His Word is our authority far beyond man\'s power.',
+        ref: 'Luke 4:1-13',
+        summary: 'God and His Word is our authority.',
         rq: 'Is God and His character increasingly governing my life?',
         verses: 'Luke 4:1-13',
       },
-
       {
         title: 'Jesus Declares His Mission',
-        ref: 'Luke 4:16–21',
-        summary: 'Jesus aligns His life with His authority.',
+        ref: 'Luke 4:16-21',
+        summary: 'Jesus aligns His life with His Father.',
         rq: 'Do I align myself with God\'s purposes?',
         verses: 'Luke 4:16-21',
       },
-
       {
         title: 'The Centurion\'s Faith',
-        ref: 'Luke 7:1–10',
-        summary: 'Authority is recognized through revealing reality.',
+        ref: 'Luke 7:1-10',
+        summary: 'Authority is recognized through alignment with reality.',
         rq: 'Do I trust God is the authority of reality?',
         verses: 'Luke 7:1-10',
       },
-
-      {
-        title: 'Sending the Seventy-Two',
-        ref: 'Luke 10',
-        summary: 'Learning from the Authority comes from obedience.',
-        rq: 'Do I trust God enough to follow His instructions?',
-        verses: 'Luke 10',
-      },
-
-      {
-        title: 'Paying Taxes to Caesar',
-        ref: 'Luke 20:20–26',
-        summary: 'Authority rightly ordered believes and desires, God over man\'s power.',
-        rq: 'Do I live as someone who believes in and desires God?',
-        verses: 'Luke 20:20-26',
-      },
-
       {
         title: 'Jesus Before Pilate',
-        ref: 'Luke 23',
+        ref: 'Luke 23:1-25',
         summary: 'True authority remains unthreatened by man\'s power.',
         rq: 'Do I stand secure in God independent of circumstance?',
-        verses: 'Luke 23',
+        verses: 'Luke 23:1-25',
       },
-
       {
         title: 'Calling the First Disciples',
         ref: 'John 1:35–51',
         summary: 'Disciples believe in and desire their Authority.',
-        rq: 'Do I believe in and desire to respond when God prompts me?',
+        rq: 'Do I believe in and desire God and His character?',
         verses: 'John 1:35-51',
       },
-
-      {
-        title: 'Many Turn Away',
-        ref: 'John 6:60–69',
-        summary: 'Good is achieved in aligning with Authority through difficulty.',
-        rq: 'Do I increasingly believe and desire God through difficulty?',
-        verses: 'John 6:60-69',
-      },
-
       {
         title: 'The Good Shepherd',
-        ref: 'John 10',
-        summary: 'Authority leads for our good with sacrificial care.',
-        rq: 'Do I trust the Shepherd\'s voice over competing ones?',
-        verses: 'John 10',
+        ref: 'John 10:1-18',
+        summary: 'Authority leads for good.',
+        rq: 'Do I recognize and trust the Shepherd\'s voice?',
+        verses: 'John 10:1-18',
       },
-
-      {
-        title: 'Triumphal Entry',
-        ref: 'John 12',
-        summary: 'Authority is often misunderstood in its humility.',
-        rq: 'Do I recognize the greatness of humility in Jesus\' authority?',
-        verses: 'John 12',
-      },
-
       {
         title: 'Peter and John Before the Sanhedrin',
         ref: 'Acts 4',
-        summary: 'God\'s authority far outweighs social pressure.',
-        rq: 'Do I increasingly believe in and desire God\'s authority over man\'s power?',
+        summary: 'God\'s authority far outweighs man\'s authority.',
+        rq: 'Do I increasingly believe in and desire God\'s authority?',
         verses: 'Acts 4',
       },
-
       {
         title: 'Paul Before the Council',
-        ref: 'Acts 23',
-        summary: 'Confidence in what you believe under examination.',
-        rq: 'Does God\'s truth anchor me when questioned?',
-        verses: 'Acts 23',
+        ref: 'Acts 23:1-11',
+        summary: 'What we believe and desire is reflected by our life.',
+        rq: 'Is God reflected by my values, my living?',
+        verses: 'Acts 23:1-11',
       },
     ],
   },

@@ -1,5 +1,6 @@
 // ============================================================
 // SUNDAY — Joy We Cultivate / Deliverance We Receive
+// NOTE: Both are Responding Well topics. "fundamental" = Joy, "response" = Deliverance.
 // ============================================================
 
 module.exports = {
@@ -7,225 +8,182 @@ module.exports = {
   key: 'sun',
 
   // ──────────────────────────────────────────────
-  // LIFE'S FUNDAMENTAL: What Is Our Purpose?
+  // RESPONDING WELL: Joy We Cultivate
+  // (stored as "fundamental" for build script compatibility)
   // ──────────────────────────────────────────────
   fundamental: {
     title: 'Joy',
-    question: 'Does my joy in God increasingly eclipse temptation?',
+    question: 'Am I increasingly experiencing God\'s joy?',
     description:
-      'the Great Commission:   I am with you always to the end\n' +
-      'the Lord\'s Prayer:        Lead us not into temptation\n\n' +
-      'Increasingly desiring reality — Joy comes not from merely resisting temptation, but from becoming the ' +
-      'kind of person who is so deeply satisfied in God that temptation loses its appeal. As we grow in ' +
-      'knowledge of God and depend on His grace, we find lasting joy, peace, and security that the world cannot ' +
-      'offer or understand, unlike the restless pursuit of power, success, and control that never satisfies. ' +
-      'Temptation gains influence when we subtly value it, but it is overcome not by willpower alone, but by ' +
-      'renewing our thinking and anchoring our desires in what is true, good, and rooted in God\'s character. ' +
-      'Pride, distraction, and self-deception can pull us off course, leading us to redefine truth around our ' +
-      'desires, while humility and focus on God keep us aligned with life\'s true value, meaning and ' +
-      'fulfillment. Trials then become opportunities—either to deepen trust in God and grow in enduring joy, ' +
-      'or to turn toward temptations and instability. Ultimately, God does not tempt but transforms, using ' +
-      'both discipline and grace to shape a life grounded in His goodness, where joy overflows and temptations ' +
-      'lose their power.',
+      'the Great Commission:   All authority has been given to me in heaven and on earth\n' +
+      'the Lord\'s Prayer:        Our Father in heaven, hallowed be Your name\n\n' +
+      'The foundation of joy - Joy is not a feeling we manufacture but a fruit of the Spirit that grows as ' +
+      'we abide in Christ. It is deeper than happiness, persisting through suffering, loss, and uncertainty, ' +
+      'because it is rooted not in our circumstances but in the goodness and presence of God. Jesus came ' +
+      'that our joy might be full, and He is Himself our joy--the one in whom all things hold together and ' +
+      'in whom our hearts find their rest. Cultivating joy requires returning again and again to the source: ' +
+      'the knowledge that we are beloved, that God is good, and that His kingdom is coming.',
 
     passages: [
       {
         title: 'The Fall',
         ref: 'Genesis 3',
-        summary: 'Temptation always promises a better joy. It never delivers.',
-        rq: 'What is competing with our joy in God?',
+        summary: 'Joy was lost when humanity turned from God; Christ restores it.',
+        rq: 'Do I look to God as the source of true and lasting joy?',
         verses: 'Genesis 3',
       },
-
       {
-        title: 'Abraham\'s Hope in Isaac',
+        title: 'Abraham\'s Hope in God',
         ref: 'Genesis 22',
-        summary: 'The joy set before us is far greater than our perception.',
-        rq: 'Do we believe in and desire the joy set before us?',
+        summary: 'Hope in God sustains joy even through the deepest sacrifice.',
+        rq: 'Does my joy rest in hope in God even through sacrifice?',
         verses: 'Genesis 22',
       },
-
       {
         title: 'Sabbath',
-        ref: 'Exodus 20:8–11',
-        summary: 'Joy deepens when we stop striving and delight in God.',
-        rq: 'Do I receive rest in communion with God?',
+        ref: 'Exodus 20:8-11',
+        summary: 'God designs rest as a rhythm for experiencing joy in Him.',
+        rq: 'Do I practice Sabbath as a means of cultivating joy in God?',
         verses: 'Exodus 20:8-11',
       },
-
       {
         title: 'Grumbling in the Wilderness',
         ref: 'Exodus 16',
-        summary: 'Temptation often disguises itself in complaint, deceiving joy.',
-        rq: 'What is deceiving us from joy in God?',
+        summary: 'Grumbling and joy cannot coexist; gratitude is the path to joy.',
+        rq: 'Am I choosing gratitude over grumbling as the path to joy?',
         verses: 'Exodus 16',
       },
-
       {
-        title: 'God\'s Presence Goes With Them',
-        ref: 'Exodus 33:12–17',
-        summary: 'Our greatest gift is God Himself.',
-        rq: 'Do I desire God above man\'s power?',
+        title: 'God Goes With Them',
+        ref: 'Exodus 33:12-17',
+        summary: 'The presence of God is the foundation of all true joy.',
+        rq: 'Do I experience God\'s presence as the foundation of my joy?',
         verses: 'Exodus 33:12-17',
       },
-
-      {
-        title: 'The Joy of Living Under God',
-        ref: 'Nehemiah 8',
-        summary: 'A pervasive sense of well-being yields joy.',
-        rq: 'Does my life reflect joy living under God?',
-        verses: 'Nehemiah 8',
-      },
-
       {
         title: 'The Lord Is My Joy',
         ref: 'Psalm 16',
-        summary: 'Joy is found in God\'s presence.',
-        rq: 'Does my life reflect the Lord is my joy?',
+        summary: 'Fullness of joy is found in God\'s presence alone.',
+        rq: 'Is fullness of joy found in God\'s presence in my daily experience?',
         verses: 'Psalm 16',
       },
-
-      {
-        title: 'Everlasting Joy Promised',
-        ref: 'Isaiah 35',
-        summary: 'We are created for a destiny of joy.',
-        rq: 'Does my life reflect pursuing our eternal destiny of joy?',
-        verses: 'Isaiah 35',
-      },
-
       {
         title: 'Jesus Cleanses a Leper',
-        ref: 'Matthew 8:1–4',
-        summary: 'Joy restores what shame destroys.',
-        rq: 'Do I move toward God in joy?',
+        ref: 'Matthew 8:1-4',
+        summary: 'Joy is restored when Jesus brings wholeness to the broken.',
+        rq: 'Do I bring my brokenness to Jesus and receive His restoring joy?',
         verses: 'Matthew 8:1-4',
       },
-
       {
         title: 'Faith of the Centurion',
-        ref: 'Matthew 8:5–13',
-        summary: 'Joy is revealed in confident trust.',
-        rq: 'Do I believe God is the source of real joy?',
+        ref: 'Matthew 8:5-13',
+        summary: 'Joy grows as we trust the authority and power of Jesus.',
+        rq: 'Does my trust in Jesus\' authority grow my experience of joy?',
         verses: 'Matthew 8:5-13',
       },
-
       {
-        title: '"Come to Me… I Will Give You Rest"',
-        ref: 'Matthew 11:28–30',
-        summary: 'Rest comes in believing and desiring God.',
-        rq: 'Do I live restfully believing and desiring God?',
+        title: '"Come to Me, I Will Give You Rest"',
+        ref: 'Matthew 11:28-30',
+        summary: 'Jesus invites the weary to find rest and joy in His yoke.',
+        rq: 'Am I coming to Jesus and finding rest and joy in His yoke?',
         verses: 'Matthew 11:28-30',
       },
-
       {
         title: 'The Transfiguration',
-        ref: 'Matthew 17',
-        summary: 'Joy grows with increasing sight of reality.',
-        rq: 'Does my life reflect the joy of increasingly seeing reality?',
-        verses: 'Matthew 17',
+        ref: 'Matthew 17:1-13',
+        summary: 'A glimpse of God\'s glory fills His people with awe and joy.',
+        rq: 'Does glimpsing God\'s glory fill me with awe and deep joy?',
+        verses: 'Matthew 17:1-13',
       },
-
       {
         title: 'Anointing at Bethany',
-        ref: 'Matthew 26:6–13',
-        summary: 'Joy expresses itself in extravagant humility and thanksgiving.',
-        rq: 'Does my life reflect extravagant humility and thanksgiving?',
+        ref: 'Matthew 26:6-13',
+        summary: 'Extravagant worship flows from a heart overflowing with joy.',
+        rq: 'Does my joy in Christ overflow into extravagant expressions of love?',
         verses: 'Matthew 26:6-13',
       },
-
       {
-        title: 'Joy with the Master',
-        ref: 'Mark 2:1–22',
-        summary: 'Joy flows where Christ is welcomed.',
-        rq: 'Do I delight and prioritize being with God?',
+        title: 'Joy With the Master',
+        ref: 'Mark 2:1-22',
+        summary: 'The presence of Jesus transforms mourning into joy.',
+        rq: 'Does the presence of Jesus in my life transform my mourning into joy?',
         verses: 'Mark 2:1-22',
       },
-
       {
-        title: 'The Seventy-Two Return with Joy',
-        ref: 'Luke 10:17–20',
-        summary: 'Joy deepens when rooted in our created purpose.',
-        rq: 'Does my life reflect joy rooted in our created purpose?',
+        title: 'The Seventy-Two Return With Joy',
+        ref: 'Luke 10:17-20',
+        summary: 'True joy is found in our names being written in heaven, not in our achievements.',
+        rq: 'Is my deepest joy found in belonging to God rather than in my accomplishments?',
         verses: 'Luke 10:17-20',
       },
-
       {
         title: 'What Was Lost Is Found',
-        ref: 'Luke 15',
-        summary: 'Heaven celebrates restoration.',
-        rq: 'Do I share God\'s joy over redemption?',
-        verses: 'Luke 15',
+        ref: 'Luke 15:1-10',
+        summary: 'Joy in heaven overflows when the lost are found.',
+        rq: 'Does the joy of the lost being found overflow in my life?',
+        verses: 'Luke 15:1-10',
       },
-
       {
-        title: '"That My Joy May Be in You"',
-        ref: 'John 15:1–11',
-        summary: 'Joy grows from abiding in God\'s love.',
-        rq: 'Does my life reflect abiding in God\'s love?',
+        title: 'That My Joy May Be in You',
+        ref: 'John 15:1-11',
+        summary: 'Jesus\' own joy is given to those who abide in Him.',
+        rq: 'Am I abiding in Christ and receiving His own joy as my joy?',
         verses: 'John 15:1-11',
       },
-
       {
         title: 'Your Grief Will Turn to Joy',
-        ref: 'John 16:16–22',
-        summary: 'Joy outlasts temporary sorrow.',
-        rq: 'Does my life reflect a vision of eternal joy?',
+        ref: 'John 16:16-22',
+        summary: 'Resurrection joy is the final word over all grief and sorrow.',
+        rq: 'Do I trust that resurrection joy is the final word over my sorrow?',
         verses: 'John 16:16-22',
       },
-
       {
         title: 'Breakfast With Jesus',
-        ref: 'John 21:1–17',
-        summary: 'Joy is found in fellowship with Christ.',
-        rq: 'Does my life reflect deep joy believing and desiring God?',
+        ref: 'John 21:1-17',
+        summary: 'Jesus meets us in our failure and restores us to joy.',
+        rq: 'Do I experience Jesus meeting me in my failure and restoring my joy?',
         verses: 'John 21:1-17',
       },
-
       {
-        title: 'Rejoicing through Persecution',
-        ref: 'Acts 5',
-        summary: 'Joy rooted in Christ outlasts suffering.',
-        rq: 'Does joy rise above discomfort?',
-        verses: 'Acts 5',
+        title: 'Rejoicing Through Persecution',
+        ref: 'Acts 5:17-42',
+        summary: 'Joy persists and even increases in the midst of suffering for Christ.',
+        rq: 'Does my joy persist and grow even through suffering?',
+        verses: 'Acts 5:17-42',
       },
-
       {
         title: 'The Jailer Rejoices',
-        ref: 'Acts 16:22–40',
-        summary: 'Joy erupts when salvation enters a household.',
-        rq: 'Does my life reflect the gratitude of salvation?',
+        ref: 'Acts 16:22-40',
+        summary: 'Encountering God transforms despair into overwhelming joy.',
+        rq: 'Does my encounter with God transform despair into overwhelming joy?',
         verses: 'Acts 16:22-40',
       },
-
       {
         title: 'Rejoice in the Lord Always',
-        ref: 'Philippians 4',
-        summary: 'Joy is cultivated, not circumstantial.',
-        rq: 'Does my life reflect a pervasive joy in God?',
-        verses: 'Philippians 4',
+        ref: 'Philippians 4:1-8',
+        summary: 'Joy is a command and a choice rooted in knowing God.',
+        rq: 'Am I choosing joy by fixing my mind on what is true and good?',
+        verses: 'Philippians 4:1-8',
       },
-
       {
         title: 'Joy in Trials',
         ref: 'James 1',
-        summary: 'Learning to understand God and life deepens joy.',
-        rq: 'Does my life reflect understanding that deepens joy?',
+        summary: 'Trials are an unlikely path to the formation of deep joy.',
+        rq: 'Am I receiving trials as an invitation to deeper and more mature joy?',
         verses: 'James 1',
       },
-
       {
         title: 'Inexpressible Joy',
         ref: '1 Peter 1',
-        summary: 'Joy flows from hope.',
-        rq: 'Does my life reflect eternal hope?',
+        summary: 'Joy in Christ is inexpressible and filled with glory.',
+        rq: 'Do I experience the inexpressible, glorious joy of knowing Christ?',
         verses: '1 Peter 1',
       },
-
       {
         title: 'Future Hope',
         ref: 'Revelation 19',
-        summary: 'Joy is the destiny of God\'s people.',
-        rq: 'Does my life reflect great joy in our future hope?',
+        summary: 'The fullness of joy awaits in the eternal celebration of God\'s kingdom.',
+        rq: 'Does the future joy of God\'s kingdom sustain me today?',
         verses: 'Revelation 19',
       },
     ],
@@ -233,208 +191,161 @@ module.exports = {
 
   // ──────────────────────────────────────────────
   // RESPONDING WELL: Deliverance We Receive
+  // (stored as "response" for build script compatibility)
   // ──────────────────────────────────────────────
   response: {
     title: 'Deliverance',
-    question: 'Am I increasingly believing in and desiring God’s deliverance?',
+    question: 'Do I increasingly trust God to deliver me?',
     description:
-      'the Great Commission:   I am with you always to the end\n' +
+      'the Great Commission:   All authority has been given to me in heaven and on earth\n' +
       'the Lord\'s Prayer:        Deliver us from evil\n\n' +
-      'The life of joy — Deliverance from evil is not a one-time event but an ongoing transformation of ' +
-      'character where we increasingly believe in and desire God and His character of love. Salvation involves ' +
-      'turning from the destructive patterns rooted in pride—such as fear, control, and selfish centeredness—' +
-      'and being reshaped into a life of humility, dependence, and alignment with God\'s authority and grace. ' +
-      'This transformation begins in the heart, where our beliefs shape our desires, and our desires reveal ' +
-      'what we truly value and worship. As our desires shift toward God, we enter a new way of living—like ' +
-      'stepping into a new "kingdom" with different values, priorities, and sources of fulfillment—no longer ' +
-      'driven by human power but by God\'s grace. Deliverance is not just escape from sin, but entry into a ' +
-      'life filled with God\'s presence, peace, and joy, where we are freed from deception and increasingly ' +
-      'live as people of light. Jesus perfectly models this life, demonstrating humility, love, peace, and ' +
-      'unwavering trust in the Father, showing that true deliverance is found in abiding in God and becoming ' +
-      'the kind of person who reflects His character.',
+      'The victory of joy - God is a God who delivers. Throughout Scripture He rescues His people from ' +
+      'slavery, exile, danger, and death -- not because they have earned it but because He is faithful and ' +
+      'good. This deliverance is not only from external threats but from internal ones: from sin, from ' +
+      'fear, from the power of the enemy, and from death itself. The ultimate deliverance is the ' +
+      'resurrection of Christ, which guarantees our own. As we trust God\'s power and faithfulness, we ' +
+      'are freed from anxiety, knowing that the battle belongs to the Lord and that He will have the ' +
+      'final word.',
 
     passages: [
       {
         title: 'God Delivers Noah',
         ref: 'Genesis 7',
-        summary: 'Abiding in God precedes deliverance.',
-        rq: 'Is my life aligned with God\'s deliverance?',
+        summary: 'God delivers the faithful through the waters of judgment.',
+        rq: 'Do I trust God to deliver me through, not around, difficulty?',
         verses: 'Genesis 7',
       },
-
       {
-        title: 'Jacob Wrestles with God',
-        ref: 'Genesis 32',
-        summary: 'Deliverance requires we wrestle with the truth and reality.',
-        rq: 'Do I desire God rather than man\'s power and control?',
-        verses: 'Genesis 32',
+        title: 'Jacob Wrestles With God',
+        ref: 'Genesis 32:24-32',
+        summary: 'Deliverance sometimes comes through wrestling with God.',
+        rq: 'Am I willing to wrestle with God and receive His blessing?',
+        verses: 'Genesis 32:24-32',
       },
-
       {
         title: 'Joseph Resists Seduction',
         ref: 'Genesis 39',
-        summary: 'God\'s love far surpasses the world\'s pleasure.',
-        rq: 'Does my life reflect believing in God\'s love?',
+        summary: 'God delivers those who remain faithful in temptation.',
+        rq: 'Do I trust God to deliver me from temptation as I remain faithful?',
         verses: 'Genesis 39',
       },
-
       {
         title: 'God Meant It for Good',
-        ref: 'Genesis 50:1–20',
-        summary: 'Good responds with confidence in God to the evil around them.',
-        rq: 'Does my life respond with confidence in God?',
+        ref: 'Genesis 50:1-20',
+        summary: 'God delivers by redeeming even the worst things done against us.',
+        rq: 'Do I trust that God is redeeming the worst things done against me?',
         verses: 'Genesis 50:1-20',
       },
-
       {
         title: 'Passover',
         ref: 'Exodus 12',
-        summary: 'Deliverance is tied to what we really trust our life on.',
-        rq: 'Do I trust my life on God or man\'s power?',
+        summary: 'God delivers through the sacrifice of the spotless lamb.',
+        rq: 'Am I trusting in Christ\'s sacrifice as the foundation of my deliverance?',
         verses: 'Exodus 12',
       },
-
       {
         title: 'The Angel Goes Before Them',
-        ref: 'Exodus 23:20–33',
-        summary: 'Deliverance goes with abiding in God\'s guidance.',
-        rq: 'Do I abide in God\'s commands?',
+        ref: 'Exodus 23:20-33',
+        summary: 'God delivers by going before us into every situation.',
+        rq: 'Do I trust that God goes before me into every challenge?',
         verses: 'Exodus 23:20-33',
       },
-
       {
         title: 'Jehoshaphat\'s Victory',
-        ref: '2 Chronicles 20',
-        summary: 'Deliverance belongs to God.',
-        rq: 'Do I look to God to fight for me?',
-        verses: '2 Chronicles 20',
+        ref: '2 Chronicles 20:1-34',
+        summary: 'God delivers when we worship and trust Him rather than fight in our own strength.',
+        rq: 'Do I worship and trust God when I face overwhelming odds?',
+        verses: '2 Chronicles 20:1-34',
       },
-
       {
         title: 'Shadrach, Meshach, and Abednego',
         ref: 'Daniel 3',
-        summary: 'Deliverance is found in unwavering trust.',
-        rq: 'Does my life reflect unwavering trust in God?',
+        summary: 'God delivers His people even from the most extreme opposition.',
+        rq: 'Do I trust God\'s deliverance even when the outcome seems impossible?',
         verses: 'Daniel 3',
       },
-
       {
-        title: 'The Lord\'s Deliverance for Job',
+        title: 'The Deliverance of Job',
         ref: 'Job 42',
-        summary: 'Deliverance is about gaining a deeper knowing of God.',
-        rq: 'Does my life reflect a deeper belief and desire for God?',
+        summary: 'God restores and delivers after the deepest suffering.',
+        rq: 'Do I trust that God will restore and deliver me after suffering?',
         verses: 'Job 42',
       },
-
-      {
-        title: 'A Coming Day of Healing',
-        ref: 'Malachi 4',
-        summary: 'Deliverance culminates in renewal.',
-        rq: 'Does my life reflect a hope and life of renewal?',
-        verses: 'Malachi 4',
-      },
-
       {
         title: 'Wise and Foolish Builders',
-        ref: 'Matthew 7:24–29',
-        summary: 'Deliverance is about renewal, believing and desiring obedience.',
-        rq: 'Is my life built on practicing Christ\'s words?',
+        ref: 'Matthew 7:24-29',
+        summary: 'True deliverance comes from building life on the Rock.',
+        rq: 'Is my life built on the Rock so that I can withstand every storm?',
         verses: 'Matthew 7:24-29',
       },
-
       {
         title: 'Pearl of Great Price',
-        ref: 'Matthew 13:45–46',
-        summary: 'Abiding recognizes what is ultimately worth surrendering everything for.',
-        rq: 'Do I gladly release man\'s power to gain what is eternal?',
+        ref: 'Matthew 13:45-46',
+        summary: 'True deliverance means surrendering all for the greatest treasure.',
+        rq: 'Have I surrendered all to receive the greatest treasure of Christ?',
         verses: 'Matthew 13:45-46',
       },
-
       {
         title: 'Parable of the Talents',
-        ref: 'Matthew 25:14–30',
-        summary: 'Faithful stewardship is our increasing deliverance.',
-        rq: 'Does my life advance and reflect God\'s character of love?',
+        ref: 'Matthew 25:14-30',
+        summary: 'Faithful stewardship is an act of trust in God\'s ultimate deliverance.',
+        rq: 'Am I faithfully stewarding what God has given me in trust?',
         verses: 'Matthew 25:14-30',
       },
-
       {
         title: 'Resurrection Morning',
         ref: 'Matthew 28',
-        summary: 'Deliverance is God\'s proven character.',
-        rq: 'Does my life reflect God\'s character of love?',
+        summary: 'The resurrection is the ultimate act of deliverance over sin and death.',
+        rq: 'Is the resurrection the foundation of my hope and confidence?',
         verses: 'Matthew 28',
       },
-
       {
-        title: '"Peace, Be Still"',
-        ref: 'Mark 4:35–41',
-        summary: 'Deliverance often begins with trusting Christ\'s presence.',
-        rq: 'Do I rest in God\'s presence amid turmoil?',
+        title: 'Jesus Stills the Sea',
+        ref: 'Mark 4:35-41',
+        summary: 'Jesus delivers us from the storms of life when we cry out to Him.',
+        rq: 'Do I cry out to Jesus in my storms, trusting His power to deliver?',
         verses: 'Mark 4:35-41',
       },
-
       {
         title: 'Gethsemane',
-        ref: 'Mark 14:32–36',
-        summary: 'Deliverance is seen in a surrendered will.',
-        rq: 'Do I choose God\'s will over my preference?',
+        ref: 'Mark 14:32-36',
+        summary: 'Deliverance sometimes means submitting to the Father\'s will.',
+        rq: 'Am I willing to submit my will to the Father even in the hardest moments?',
         verses: 'Mark 14:32-36',
       },
-
       {
-        title: 'The Empty Tomb',
-        ref: 'Mark 16',
-        summary: 'Deliverance is found in God\'s will.',
-        rq: 'Do I pursue God\'s will for my life?',
-        verses: 'Mark 16',
-      },
-
-      {
-        title: '"It Is Finished"',
-        ref: 'John 19:16–30',
-        summary: 'Deliverance is accomplished in Christ.',
-        rq: 'Do I pursue Christ\'s instructions and working in my life?',
-        verses: 'John 19:16-30',
-      },
-
-      {
-        title: 'The Risen Lord Appears',
+        title: 'The Risen Lord',
         ref: 'John 20',
-        summary: 'Deliverance replaces fear with peace.',
-        rq: 'Does my life reflect resurrection peace?',
+        summary: 'The risen Christ delivers us from the power of death and despair.',
+        rq: 'Do I live in the power of Christ\'s resurrection, delivered from despair?',
         verses: 'John 20',
       },
-
       {
         title: 'More Than Conquerors',
         ref: 'Romans 8',
-        summary: 'Deliverance is rooted in being led by the Spirit in God\'s love.',
-        rq: 'Does my life reflect being led by the Spirit in God\'s love?',
+        summary: 'In Christ, we are more than conquerors over everything that opposes us.',
+        rq: 'Do I live as more than a conqueror through Christ who loves me?',
         verses: 'Romans 8',
       },
-
       {
         title: 'The Armor of God',
-        ref: 'Ephesians 6',
-        summary: 'Deliverance is being increasingly equipped for life.',
-        rq: 'Does my life reflect being increasingly equipped for life?',
-        verses: 'Ephesians 6',
+        ref: 'Ephesians 6:10-24',
+        summary: 'God provides full armor for deliverance in spiritual battle.',
+        rq: 'Am I putting on God\'s armor and standing firm in His strength?',
+        verses: 'Ephesians 6:10-24',
       },
-
       {
         title: 'Resist the Devil',
         ref: 'James 4',
-        summary: 'Deliverance increasingly sees reality.',
-        rq: 'Does my life increasingly reflect living for good?',
+        summary: 'God delivers those who humble themselves and resist the enemy.',
+        rq: 'Am I humbly submitting to God and resisting the enemy\'s schemes?',
         verses: 'James 4',
       },
-
       {
         title: 'The New Heaven and New Earth',
         ref: 'Revelation 22',
-        summary: 'Deliverance is life increasingly maturing in good.',
-        rq: 'Does my life reflect a life pursuing deliverance?',
+        summary: 'God\'s final deliverance ushers in a new creation with no more suffering.',
+        rq: 'Does hope in God\'s final deliverance sustain me in present hardship?',
         verses: 'Revelation 22',
       },
     ],
